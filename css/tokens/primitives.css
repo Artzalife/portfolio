@@ -75,7 +75,11 @@
   --font-family-serif: "Playfair Display", Georgia, "Times New Roman", serif;
   /* Classy H1/body/UI sans — Circular/Gill stand-in (Google Fonts) */
   --font-family-sans: "Plus Jakarta Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
-  /* Playful — Space Grotesk for all roles */
+  /* Playful Display + H2 — soft ultra-bold rounded (Buendia / Bold Monday stand-in) */
+  --font-family-rounded-display: "Nunito", system-ui, sans-serif;
+  /* Playful H1 / body / UI — rounder geometric (Instrument Sans) */
+  --font-family-soft-sans: "Instrument Sans", system-ui, sans-serif;
+  /* Playful eyebrow (unchanged) — Space Grotesk */
   --font-family-grotesk: "Space Grotesk", system-ui, sans-serif;
   --font-family-mono: ui-monospace, "SF Mono", Menlo, monospace;
 
@@ -85,6 +89,8 @@
   --font-weight-500: 500;
   --font-weight-600: 600;
   --font-weight-700: 700;
+  --font-weight-800: 800;
+  --font-weight-900: 900;
 
   /* ---------- Fluid type scale (Utopia-style, 360px → 1240px, ratio 1.2) ----------
      Regenerate at utopia.fyi/type/calculator if you change the range. */

@@ -56,12 +56,13 @@
   --color-action-secondary-border: var(--blue-600);
 
   /* ======================= SEMANTIC: typography ======================= */
-  --font-display: var(--font-family-grotesk);
-  --font-heading: var(--font-family-grotesk);
-  --font-body: var(--font-family-grotesk);
+  /* Display + H2 → Nunito Black; H1/H3/body → Instrument Sans; eyebrow → Space Grotesk */
+  --font-display: var(--font-family-rounded-display);
+  --font-heading: var(--font-family-soft-sans);
+  --font-body: var(--font-family-soft-sans);
   --font-eyebrow: var(--font-family-grotesk);
 
-  --font-weight-display: var(--font-weight-700);
+  --font-weight-display: var(--font-weight-900); /* Nunito Black — Buendia-like mass */
   --font-weight-heading: var(--font-weight-600);
   --font-weight-body: var(--font-weight-400);
   --font-weight-strong: var(--font-weight-600);
