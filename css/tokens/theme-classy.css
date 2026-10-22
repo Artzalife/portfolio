@@ -53,13 +53,14 @@
   --color-action-secondary-border: var(--neutral-900);
 
   /* ======================= SEMANTIC: typography ======================= */
+  /* Display + H2 → Playfair; H1 / H3+ / body / UI → Plus Jakarta Sans */
   --font-display: var(--font-family-serif);
-  --font-heading: var(--font-family-serif);
+  --font-heading: var(--font-family-sans);
   --font-body: var(--font-family-sans);
   --font-eyebrow: var(--font-family-sans);
 
-  --font-weight-display: var(--font-weight-400);
-  --font-weight-heading: var(--font-weight-500);
+  --font-weight-display: var(--font-weight-700); /* Playfair Bold */
+  --font-weight-heading: var(--font-weight-600);
   --font-weight-body: var(--font-weight-400);
   --font-weight-strong: var(--font-weight-600);
   --font-weight-eyebrow: var(--font-weight-600);

@@ -30,11 +30,13 @@ js/
 Load CSS in this order: primitives → semantic → theme-classy → theme-playful → base → layout → components.
 
 ## Fonts
+Classy uses two families only: **Playfair Display** (Display + H2) and **Plus Jakarta Sans** (H1, H3+, body, UI). Playful uses **Space Grotesk** for all roles.
 ```html
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Inter:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 ```
+In `base.css`, `.text-display` / `h2` use `--font-display` + `--font-weight-display`; `h1` / `h3` use `--font-heading`.
 
 ## Token tiers
 1. **Primitives** (`--pink-600`, `--space-m`, `--radius-28`) describe WHAT a value is.
