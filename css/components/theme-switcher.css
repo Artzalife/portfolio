@@ -1,0 +1,105 @@
+/* ==========================================================================
+   THEME SWITCHER — "I'm feelin…" segmented control
+   ========================================================================== */
+
+.theme-switcher {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-inline-default);
+  margin: 0;
+  padding: 0;
+  border: none;
+  min-inline-size: 0;
+}
+
+.theme-switcher__legend {
+  padding: 0;
+  font-family: var(--font-body);
+  font-size: var(--text-size-small);
+  font-weight: var(--font-weight-body);
+  color: var(--switcher-label-color);
+  white-space: nowrap;
+}
+
+.theme-switcher__track {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: stretch;
+  padding: var(--switcher-padding);
+  background-color: var(--switcher-bg);
+  border: var(--switcher-border);
+  border-radius: var(--switcher-radius);
+  isolation: isolate;
+}
+
+.theme-switcher__thumb {
+  position: absolute;
+  inset-block: var(--switcher-padding);
+  inset-inline-start: var(--switcher-padding);
+  width: calc((100% - (var(--switcher-padding) * 2)) / 3);
+  border-radius: var(--switcher-radius);
+  background-color: var(--switcher-thumb-bg);
+  transform: translateX(calc(100% * var(--switcher-thumb-index, 0)));
+  transition:
+    transform var(--motion-duration-theme) var(--motion-ease-theme),
+    background-color var(--motion-duration-theme) var(--motion-ease-theme);
+  pointer-events: none;
+}
+
+.theme-switcher__option {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-inline-default);
+  margin: 0;
+  padding-block: var(--switcher-option-padding-block);
+  padding-inline: var(--switcher-option-padding-inline);
+  border-radius: var(--switcher-radius);
+  font-family: var(--font-body);
+  font-size: var(--text-size-small);
+  font-weight: var(--font-weight-strong);
+  color: var(--switcher-option-text);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: color var(--motion-duration-theme) var(--motion-ease-theme);
+}
+
+.theme-switcher__option:has(input:checked) {
+  color: var(--switcher-option-text-active);
+}
+
+.theme-switcher__option:has(input:disabled) {
+  opacity: var(--button-disabled-opacity);
+  cursor: not-allowed;
+}
+
+.theme-switcher__option input {
+  position: absolute;
+  inset: 0;
+  margin: 0;
+  opacity: 0;
+  cursor: inherit;
+}
+
+.theme-switcher__option input:focus-visible + .theme-switcher__label {
+  outline: var(--focus-ring-width) solid var(--color-focus-ring);
+  outline-offset: var(--focus-ring-offset);
+}
+
+.theme-switcher__label {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-inline-default);
+  border-radius: var(--switcher-radius);
+}
+
+.theme-switcher__soon {
+  font-size: var(--text-size-small);
+  font-weight: var(--font-weight-body);
+  text-transform: lowercase;
+  color: inherit;
+  opacity: var(--button-disabled-opacity);
+}
