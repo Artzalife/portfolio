@@ -30,9 +30,12 @@
     <link rel="stylesheet" href="css/tokens/theme-playful.css" />
     <link rel="stylesheet" href="css/base.css" />
     <link rel="stylesheet" href="css/components/button.css" />
+    <link rel="stylesheet" href="css/components/card.css" />
     <link rel="stylesheet" href="css/components/theme-switcher.css" />
   </head>
   <body>
+    <span class="decor-cloud decor-cloud--a" aria-hidden="true"></span>
+    <span class="decor-cloud decor-cloud--b" aria-hidden="true"></span>
     <div class="sg-page">
       <div class="sg-container">
         <header class="sg-header">
@@ -40,8 +43,8 @@
             <p class="eyebrow">Design system</p>
             <h1 class="text-h1">Styleguide</h1>
             <p class="text-body-lg text-secondary">
-              Classy type: Playfair Display Bold for display &amp; H2; Plus
-              Jakarta Sans for H1, body, and UI. Switch themes to compare.
+              Classy stays editorial. Playful is up in the clouds — sky
+              gradient, glass cards, soft shadows; navy &amp; pink type/actions.
             </p>
           </div>
 
@@ -155,6 +158,39 @@
                   <span class="highlight">highlighter swipe</span>
                   behind the words.
                 </p>
+              </div>
+            </div>
+          </section>
+
+          <section class="sg-section" aria-labelledby="card-heading">
+            <div class="sg-section__title">
+              <h2 id="card-heading" class="text-h2">Cards</h2>
+            </div>
+
+            <div class="sg-stack">
+              <div class="sg-specimen">
+                <p class="sg-specimen__label">
+                  card · glass + iridescent edge in Playful; hairline rule in
+                  Classy
+                </p>
+                <div class="sg-row">
+                  <article class="card">
+                    <p class="eyebrow">Case study</p>
+                    <h3 class="card__title">Soap-bubble surfaces</h3>
+                    <p class="card__body">
+                      Translucent fill, backdrop blur, and a quiet iridescent
+                      rim — premium air, not candy.
+                    </p>
+                  </article>
+                  <article class="card card--alt">
+                    <p class="eyebrow">Alternate</p>
+                    <h3 class="card__title">Alt fill token</h3>
+                    <p class="card__body">
+                      Uses <code class="text-small">--card-bg-alt</code> for
+                      rhythm in a bento without changing layout.
+                    </p>
+                  </article>
+                </div>
               </div>
             </div>
           </section>

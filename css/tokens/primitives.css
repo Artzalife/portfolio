@@ -52,6 +52,21 @@
   --blue-700: #24338a;
   --blue-800: #1b2669;
 
+  /* ---------- Color: sky (Playful airy page) ---------- */
+  --sky-50:  #f5faff;
+  --sky-100: #e6f3fd;
+  --sky-200: #cde8fb;
+  --sky-300: #a9d8f7;
+  --sky-400: #7cc2f0;
+
+  /* ---------- Color: soft iridescence (card edge / tints) ---------- */
+  --lavender-100: #ece8fd;
+  --lavender-300: #cbbff7;
+  --mint-100: #e3f8f1;
+  --mint-300: #a8e8d4;
+  --peach-100: #fdeee6;
+  --peach-300: #f8c9b0;
+
   /* ---------- Color: paper ---------- */
   --paper-warm: #f6f2ea;
 
