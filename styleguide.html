@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="classy">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Styleguide — Alissa</title>
+    <script>
+      (function () {
+        var theme = "classy";
+        try {
+          var stored = localStorage.getItem("portfolio-theme");
+          if (stored === "playful" || stored === "classy") theme = stored;
+        } catch (e) {}
+        document.documentElement.dataset.theme = theme;
+        document.documentElement.style.setProperty(
+          "--switcher-thumb-index",
+          theme === "playful" ? "1" : "0"
+        );
+      })();
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Inter:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/tokens/primitives.css" />
+    <link rel="stylesheet" href="css/tokens/semantic.css" />
+    <link rel="stylesheet" href="css/tokens/theme-classy.css" />
+    <link rel="stylesheet" href="css/tokens/theme-playful.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/components/button.css" />
+    <link rel="stylesheet" href="css/components/theme-switcher.css" />
+  </head>
+  <body>
+    <div class="sg-page">
+      <div class="sg-container">
+        <header class="sg-header">
+          <div class="sg-header__intro">
+            <p class="eyebrow">Design system</p>
+            <h1 class="text-h1">Styleguide</h1>
+            <p class="text-body-lg text-secondary">
+              Typography, buttons, and the theme switcher — rendered in every
+              available theme.
+            </p>
+          </div>
+
+          <fieldset class="theme-switcher">
+            <legend class="theme-switcher__legend">I’m feelin…</legend>
+            <div class="theme-switcher__track">
+              <span class="theme-switcher__thumb" aria-hidden="true"></span>
+
+              <label class="theme-switcher__option">
+                <input type="radio" name="theme" value="classy" checked />
+                <span class="theme-switcher__label">Classy</span>
+              </label>
+
+              <label class="theme-switcher__option">
+                <input type="radio" name="theme" value="playful" />
+                <span class="theme-switcher__label">Playful</span>
+              </label>
+
+              <label class="theme-switcher__option">
+                <input type="radio" name="theme" value="cozy" disabled />
+                <span class="theme-switcher__label">
+                  Cozy
+                  <span class="theme-switcher__soon">soon</span>
+                </span>
+              </label>
+            </div>
+          </fieldset>
+        </header>
+
+        <main>
+          <section class="sg-section" aria-labelledby="type-heading">
+            <div class="sg-section__title">
+              <h2 id="type-heading" class="text-h2">Typography</h2>
+            </div>
+
+            <div class="sg-stack">
+              <div class="sg-specimen">
+                <p class="sg-specimen__label">display · .text-display</p>
+                <p class="text-display">Product design, thoughtfully made.</p>
+              </div>
+
+              <div class="sg-specimen">
+                <p class="sg-specimen__label">h1 · .text-h1</p>
+                <h1 class="text-h1">Case studies &amp; selected work</h1>
+              </div>
+
+              <div class="sg-specimen">
+                <p class="sg-specimen__label">h2 · .text-h2</p>
+                <h2 class="text-h2">Brief, palette, and process</h2>
+              </div>
+
+              <div class="sg-specimen">
+                <p class="sg-specimen__label">h3 · .text-h3</p>
+                <h3 class="text-h3">Research notes from the field</h3>
+              </div>
+
+              <div class="sg-specimen">
+                <p class="sg-specimen__label">eyebrow · .eyebrow</p>
+                <p class="eyebrow">Brief &amp; palette</p>
+              </div>
+
+              <div class="sg-specimen">
+                <p class="sg-specimen__label">body-lg · .text-body-lg</p>
+                <p class="text-body-lg">
+                  Larger supporting copy for intros and lead paragraphs that need
+                  a bit more presence.
+                </p>
+              </div>
+
+              <div class="sg-specimen">
+                <p class="sg-specimen__label">body · .text-body / p</p>
+                <p class="text-body">
+                  Body text for reading. Keep lines comfortable and contrast
+                  WCAG-friendly across both themes.
+                </p>
+              </div>
+
+              <div class="sg-specimen">
+                <p class="sg-specimen__label">small · .text-small</p>
+                <p class="text-small">
+                  Captions, metadata, and quiet secondary notes.
+                </p>
+              </div>
+
+              <div class="sg-specimen">
+                <p class="sg-specimen__label">emphasis · .emphasis</p>
+                <p class="text-body">
+                  Design systems people will
+                  <em class="emphasis">actually use.</em>
+                </p>
+              </div>
+
+              <div class="sg-specimen">
+                <p class="sg-specimen__label">highlight · .highlight</p>
+                <p class="text-body-lg">
+                  Mark the phrase that matters with a
+                  <span class="highlight">highlighter swipe</span>
+                  behind the words.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <section class="sg-section" aria-labelledby="button-heading">
+            <div class="sg-section__title">
+              <h2 id="button-heading" class="text-h2">Buttons</h2>
+            </div>
+
+            <div class="sg-stack">
+              <div class="sg-specimen">
+                <p class="sg-specimen__label">primary</p>
+                <div class="sg-row">
+                  <button type="button" class="button button--primary">
+                    View work
+                  </button>
+                  <button type="button" class="button button--primary" disabled>
+                    Disabled
+                  </button>
+                </div>
+              </div>
+
+              <div class="sg-specimen">
+                <p class="sg-specimen__label">secondary</p>
+                <div class="sg-row">
+                  <button type="button" class="button button--secondary">
+                    Get in touch
+                  </button>
+                  <button
+                    type="button"
+                    class="button button--secondary"
+                    disabled
+                  >
+                    Disabled
+                  </button>
+                </div>
+              </div>
+
+              <div class="sg-specimen">
+                <p class="sg-specimen__label">link</p>
+                <div class="sg-row">
+                  <button type="button" class="button button--link">
+                    Read the case study
+                  </button>
+                  <button type="button" class="button button--link" disabled>
+                    Disabled
+                  </button>
+                </div>
+              </div>
+            </div>
+          </section>
+        </main>
+      </div>
+    </div>
+
+    <script src="js/theme.js"></script>
+  </body>
+</html>

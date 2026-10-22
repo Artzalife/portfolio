@@ -1,0 +1,101 @@
+/* ==========================================================================
+   BUTTON — primary, secondary, link
+   ========================================================================== */
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-inline-default);
+  padding-block: var(--button-padding-block);
+  padding-inline: var(--button-padding-inline);
+  border-radius: var(--button-radius);
+  border-style: solid;
+  border-width: var(--button-border-width);
+  font-family: var(--button-font);
+  font-size: var(--text-size-body);
+  font-weight: var(--button-font-weight);
+  line-height: var(--line-height-heading);
+  text-decoration: none;
+  box-shadow: var(--button-shadow);
+  transition:
+    background-color var(--motion-duration-hover) var(--motion-ease-hover),
+    color var(--motion-duration-hover) var(--motion-ease-hover),
+    border-color var(--motion-duration-hover) var(--motion-ease-hover),
+    box-shadow var(--motion-duration-hover) var(--motion-ease-hover),
+    transform var(--motion-duration-hover) var(--motion-ease-hover);
+}
+
+.button:focus-visible {
+  outline: var(--focus-ring-width) solid var(--color-focus-ring);
+  outline-offset: var(--focus-ring-offset);
+}
+
+.button:disabled,
+.button[aria-disabled="true"] {
+  opacity: var(--button-disabled-opacity);
+  cursor: not-allowed;
+  pointer-events: none;
+  box-shadow: none;
+}
+
+/* ---------- Primary ---------- */
+
+.button--primary {
+  background-color: var(--color-action-primary-bg);
+  border-color: var(--color-action-primary-bg);
+  color: var(--color-action-primary-text);
+}
+
+.button--primary:hover {
+  background-color: var(--color-action-primary-bg-hover);
+  border-color: var(--color-action-primary-bg-hover);
+  transform: translateY(var(--motion-hover-lift));
+}
+
+.button--primary:active {
+  background-color: var(--color-action-primary-bg-hover);
+  transform: translateY(0);
+}
+
+/* ---------- Secondary ---------- */
+
+.button--secondary {
+  background-color: var(--color-action-secondary-bg);
+  border-color: var(--color-action-secondary-border);
+  color: var(--color-action-secondary-text);
+}
+
+.button--secondary:hover {
+  background-color: var(--color-action-secondary-bg-hover);
+  transform: translateY(var(--motion-hover-lift));
+}
+
+.button--secondary:active {
+  background-color: var(--color-action-secondary-bg-hover);
+  transform: translateY(0);
+}
+
+/* ---------- Link (text button) ---------- */
+
+.button--link {
+  padding-block: var(--space-stack-tight);
+  padding-inline: 0;
+  border-width: 0;
+  border-radius: 0;
+  background-color: transparent;
+  box-shadow: none;
+  color: var(--color-text-link);
+  text-decoration: underline;
+  text-decoration-color: var(--link-underline-color);
+  text-decoration-thickness: var(--link-underline-thickness);
+  text-underline-offset: var(--link-underline-offset);
+}
+
+.button--link:hover {
+  color: var(--color-text-link-hover);
+}
+
+.button--link:active {
+  color: var(--color-text-link-hover);
+}

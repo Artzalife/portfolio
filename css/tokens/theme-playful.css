@@ -118,6 +118,7 @@
   --button-font: var(--font-body);
   --button-font-weight: var(--font-weight-600);
   --button-shadow: var(--shadow-control);
+  --button-disabled-opacity: 0.45;
 
   /* ======================= COMPONENT: link ======================= */
   --link-underline-color: var(--color-text-accent);
@@ -150,6 +151,9 @@
   --switcher-bg: var(--neutral-0);
   --switcher-border: var(--border-width-2) solid var(--color-border-strong);
   --switcher-radius: var(--radius-pill);
+  --switcher-padding: var(--space-3xs);
+  --switcher-option-padding-block: var(--space-2xs);
+  --switcher-option-padding-inline: var(--space-s);
   --switcher-label-color: var(--color-text-secondary);
   --switcher-option-text: var(--color-text-secondary);
   --switcher-option-text-active: var(--color-text-inverse);
