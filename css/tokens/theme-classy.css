@@ -16,6 +16,7 @@
 
   /* Backgrounds */
   --color-bg-page: var(--neutral-0);
+  --background-page: var(--color-bg-page); /* solid; mirrors Playful gradient token */
   --color-bg-surface: var(--neutral-0);
   --color-bg-surface-raised: var(--neutral-50);
   --color-bg-tint-1: var(--neutral-50);
@@ -113,6 +114,9 @@
   --card-shadow-hover: var(--shadow-card-hover);
   --card-padding-block: var(--space-m);
   --card-padding-inline: 0;
+  --card-backdrop-filter: none;
+  --card-edge: none;
+  --card-edge-width: 0;
 
   /* ======================= COMPONENT: button ======================= */
   --button-radius: var(--radius-control);
@@ -167,4 +171,12 @@
   /* Bubbles, squiggles, sketches — hidden in Classy */
   --decor-display: none;
   --decor-opacity: 0;
+  --decor-cloud-color: transparent;
+  --decor-cloud-radius: var(--radius-pill);
+  --decor-cloud-width-a: var(--space-3xl);
+  --decor-cloud-height-a: var(--space-xl);
+  --decor-cloud-width-b: var(--space-2xl);
+  --decor-cloud-height-b: var(--space-l);
+  --decor-cloud-blur-a: var(--space-s);
+  --decor-cloud-blur-b: var(--space-xs);
 }

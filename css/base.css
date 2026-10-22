@@ -17,13 +17,16 @@
 }
 
 html {
+  height: 100%;
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
 }
 
 body {
+  position: relative;
   min-height: 100%;
-  background-color: var(--color-bg-page);
+  background: var(--background-page);
+  background-attachment: fixed;
   color: var(--color-text-primary);
   font-family: var(--font-body);
   font-size: var(--text-size-body);

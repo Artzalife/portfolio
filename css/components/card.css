@@ -1,0 +1,96 @@
+/* ==========================================================================
+   CARD — editorial column (Classy) / glass bubble (Playful)
+   Surfaces via tokens only. Layout shape stays theme-invariant.
+   ========================================================================== */
+
+.card {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-stack-default);
+  padding-block: var(--card-padding-block);
+  padding-inline: var(--card-padding-inline);
+  background-color: var(--card-bg);
+  backdrop-filter: var(--card-backdrop-filter);
+  -webkit-backdrop-filter: var(--card-backdrop-filter);
+  border-radius: var(--card-radius);
+  border-style: solid;
+  border-width: var(--card-border-width);
+  border-color: var(--card-border-color);
+  border-block-start: var(--card-divider);
+  box-shadow: var(--card-shadow);
+  transition:
+    box-shadow var(--motion-duration-hover) var(--motion-ease-hover),
+    transform var(--motion-duration-hover) var(--motion-ease-hover);
+}
+
+.card--alt {
+  background-color: var(--card-bg-alt);
+}
+
+.card:hover {
+  box-shadow: var(--card-shadow-hover);
+  transform: translateY(var(--motion-hover-lift));
+}
+
+/* Iridescent edge ring — zero width / none fill in Classy (invisible) */
+.card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: var(--card-edge-width);
+  background: var(--card-edge);
+  pointer-events: none;
+  -webkit-mask:
+    linear-gradient(white 0 0) content-box,
+    linear-gradient(white 0 0);
+  mask:
+    linear-gradient(white 0 0) content-box,
+    linear-gradient(white 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+
+.card__title {
+  font-family: var(--font-heading);
+  font-size: var(--text-size-h3);
+  font-weight: var(--font-weight-heading);
+  line-height: var(--line-height-heading);
+  color: var(--color-text-primary);
+}
+
+.card__body {
+  font-family: var(--font-body);
+  font-size: var(--text-size-body);
+  font-weight: var(--font-weight-body);
+  line-height: var(--line-height-body);
+  color: var(--color-text-secondary);
+}
+
+/* Soft cloud blobs — gated by --decor-display (Playful only) */
+.decor-cloud {
+  display: var(--decor-display);
+  opacity: var(--decor-opacity);
+  position: absolute;
+  border-radius: var(--decor-cloud-radius);
+  background-color: var(--decor-cloud-color);
+  pointer-events: none;
+}
+
+.decor-cloud--a {
+  width: var(--decor-cloud-width-a);
+  height: var(--decor-cloud-height-a);
+  inset-block-start: var(--space-stack-loose);
+  inset-inline-end: var(--space-gutter);
+  filter: blur(var(--decor-cloud-blur-a));
+}
+
+.decor-cloud--b {
+  width: var(--decor-cloud-width-b);
+  height: var(--decor-cloud-height-b);
+  inset-block-start: var(--space-section);
+  inset-inline-start: var(--space-gutter);
+  filter: blur(var(--decor-cloud-blur-b));
+}

@@ -1,7 +1,7 @@
 /* ==========================================================================
    THEME: PLAYFUL — tier 2 (semantic) + tier 3 (component)
-   Riso-inspired: fluorescent pink + federal blue on blue-tinted off-white.
-   Bento boxes switch ON — filled bubbles with hard offset shadows.
+   Up in the clouds: airy sky gradient, glass soap-bubble cards, soft shadows.
+   Navy + pink stay high-contrast for type and actions (not girly pastels).
 
    RULE: must define exactly the same token names as theme-classy.css.
    ========================================================================== */
@@ -12,24 +12,30 @@
   /* ======================= SEMANTIC: color ======================= */
 
   /* Backgrounds */
-  --color-bg-page: var(--blue-50);
+  --color-bg-page: var(--sky-50); /* solid fallback */
+  --background-page: linear-gradient(
+    180deg,
+    var(--sky-50) 0%,
+    var(--sky-100) 45%,
+    var(--sky-300) 100%
+  );
   --color-bg-surface: var(--neutral-0);
   --color-bg-surface-raised: var(--neutral-0);
-  --color-bg-tint-1: var(--pink-100);
-  --color-bg-tint-2: var(--blue-100);
+  --color-bg-tint-1: var(--sky-100);
+  --color-bg-tint-2: var(--lavender-100);
   --color-bg-inverse: var(--blue-700);
 
-  /* Text */
+  /* Text — navy + pink, high contrast on airy surfaces */
   --color-text-primary: var(--blue-800);
   --color-text-secondary: var(--blue-600);
   --color-text-inverse: var(--neutral-0);
   --color-text-accent: var(--pink-600);
-  --color-text-eyebrow: var(--pink-600);
+  --color-text-eyebrow: var(--pink-600); /* AA on page/surface; use pink-700 on tinted cards — see design-system.mdc Eyebrows */
   --color-text-link: var(--blue-700);
   --color-text-link-hover: var(--pink-600);
 
   /* Highlight */
-  --color-highlight: var(--pink-200);
+  --color-highlight: var(--lavender-100);
 
   /* Borders */
   --color-border-strong: var(--blue-600);
@@ -40,12 +46,12 @@
   --color-decor-1: var(--pink-400);
   --color-decor-2: var(--blue-400);
 
-  /* Actions */
+  /* Actions — primary pink, secondary navy border/text */
   --color-action-primary-bg: var(--pink-600);
   --color-action-primary-bg-hover: var(--pink-700);
   --color-action-primary-text: var(--neutral-0);
   --color-action-secondary-bg: var(--neutral-0);
-  --color-action-secondary-bg-hover: var(--blue-100);
+  --color-action-secondary-bg-hover: var(--sky-100);
   --color-action-secondary-text: var(--blue-700);
   --color-action-secondary-border: var(--blue-600);
 
@@ -71,7 +77,7 @@
   --line-height-heading: var(--line-height-snug);
   --line-height-body: var(--line-height-normal);
 
-  /* Full-block highlight (like a riso ink pass) */
+  /* Soft lavender wash (was riso pink block) */
   --highlight-background: linear-gradient(
     var(--color-highlight),
     var(--color-highlight)
@@ -86,29 +92,40 @@
   --border-width-default: var(--border-width-2);
   --border-style-divider: dotted;
 
-  --shadow-card: var(--shadow-offset-md) var(--blue-600);
-  --shadow-card-hover: var(--shadow-offset-lg) var(--blue-600);
-  --shadow-control: var(--shadow-offset-sm) var(--blue-700);
+  /* Soft shadows only — no hard riso offsets */
+  --shadow-card: 0 2px 8px rgb(46 63 163 / 0.06), 0 8px 32px rgb(46 63 163 / 0.10);
+  --shadow-card-hover: 0 4px 12px rgb(46 63 163 / 0.08), 0 16px 48px rgb(46 63 163 / 0.14);
+  --shadow-control: 0 2px 8px rgb(46 63 163 / 0.08), 0 4px 16px rgb(46 63 163 / 0.06);
 
   /* ======================= SEMANTIC: motion ======================= */
   --motion-duration-theme: var(--duration-slower);
   --motion-ease-theme: var(--ease-spring);         /* bouncy */
   --motion-duration-hover: var(--duration-base);
   --motion-ease-hover: var(--ease-spring);
-  --motion-hover-lift: -3px;
+  --motion-hover-lift: -4px;
 
   /* ======================= COMPONENT: card / bento ======================= */
-  /* The trick: same grid, boxes switched on. */
-  --card-bg: var(--color-bg-tint-1);
-  --card-bg-alt: var(--color-bg-tint-2);
-  --card-border-width: var(--border-width-2);
-  --card-border-color: var(--color-border-strong);
+  /* Glass soap bubbles — soft fill + iridescent edge (not hard borders). */
+  --card-bg: rgb(255 255 255 / 0.7);
+  --card-bg-alt: rgb(230 243 253 / 0.75);
+  --card-border-width: 0;
+  --card-border-color: transparent;
   --card-divider: none;
   --card-radius: var(--radius-card);
   --card-shadow: var(--shadow-card);
   --card-shadow-hover: var(--shadow-card-hover);
   --card-padding-block: var(--space-l);
   --card-padding-inline: var(--space-l);
+  --card-backdrop-filter: blur(16px) saturate(140%);
+  --card-edge: conic-gradient(
+    from 180deg at 50% 50%,
+    var(--sky-300),
+    var(--lavender-300),
+    var(--mint-300),
+    var(--peach-300),
+    var(--sky-300)
+  );
+  --card-edge-width: 1.5px;
 
   /* ======================= COMPONENT: button ======================= */
   --button-radius: var(--radius-control);
@@ -162,4 +179,12 @@
   /* ======================= COMPONENT: decorations ======================= */
   --decor-display: block;
   --decor-opacity: 1;
+  --decor-cloud-color: rgb(255 255 255 / 0.8);
+  --decor-cloud-radius: var(--radius-pill);
+  --decor-cloud-width-a: var(--space-3xl);
+  --decor-cloud-height-a: var(--space-xl);
+  --decor-cloud-width-b: var(--space-2xl);
+  --decor-cloud-height-b: var(--space-l);
+  --decor-cloud-blur-a: var(--space-s);
+  --decor-cloud-blur-b: var(--space-xs);
 }
