@@ -56,8 +56,11 @@
   --paper-warm: #f6f2ea;
 
   /* ---------- Font families ---------- */
-  --font-family-serif: "Fraunces", Georgia, "Times New Roman", serif;
-  --font-family-sans: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  /* Classy display/H2 serif — Playfair Display Bold */
+  --font-family-serif: "Playfair Display", Georgia, "Times New Roman", serif;
+  /* Classy H1/body/UI sans — Circular/Gill stand-in (Google Fonts) */
+  --font-family-sans: "Plus Jakarta Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  /* Playful — Space Grotesk for all roles */
   --font-family-grotesk: "Space Grotesk", system-ui, sans-serif;
   --font-family-mono: ui-monospace, "SF Mono", Menlo, monospace;
 

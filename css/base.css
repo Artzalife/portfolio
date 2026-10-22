@@ -96,9 +96,10 @@ h1,
 
 h2,
 .text-h2 {
-  font-family: var(--font-heading);
+  /* Shares display family/weight so Classy H2 can be Playfair Bold */
+  font-family: var(--font-display);
   font-size: var(--text-size-h2);
-  font-weight: var(--font-weight-heading);
+  font-weight: var(--font-weight-display);
   letter-spacing: var(--letter-spacing-display);
   line-height: var(--line-height-heading);
   color: var(--color-text-primary);
