@@ -1,0 +1,105 @@
+---
+description: Portfolio design system rules — tokens, themes, components, and how homepage changes flow back into the system
+globs: ["**/*.html", "**/*.css", "**/*.js"]
+alwaysApply: true
+---
+
+# Portfolio Design System — Rules for Cursor
+
+## Stack (non-negotiable)
+- HTML, CSS, and vanilla JavaScript ONLY.
+- No frameworks, no build step, no npm packages, no Tailwind, no Sass, no TypeScript.
+- External resources allowed: Google Fonts only.
+- Use modern CSS freely: custom properties, grid, subgrid, `:has()`, `clamp()`, container queries, nesting.
+
+## File structure
+```
+index.html                    homepage
+styleguide.html               every component, rendered in every theme
+css/
+  tokens/primitives.css       tier 1 — raw values
+  tokens/semantic.css         tier 2 — theme-invariant roles (type sizes, spacing, layout)
+  tokens/theme-classy.css     tier 2 + 3 — default theme
+  tokens/theme-playful.css    tier 2 + 3
+  base.css                    reset, element defaults, typography
+  layout.css                  container, stack, cluster, 12-col grid, bento
+  components/                 one file per component (button.css, card.css, ...)
+js/
+  theme.js                    theme switcher
+```
+Load CSS in this order: primitives → semantic → theme-classy → theme-playful → base → layout → components.
+
+## Fonts
+```html
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Inter:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+```
+
+## Token tiers
+1. **Primitives** (`--pink-600`, `--space-m`, `--radius-28`) describe WHAT a value is.
+2. **Semantic** (`--color-text-accent`, `--color-action-primary-bg`) describe WHAT IT'S FOR.
+3. **Component** (`--card-bg`, `--button-radius`, `--switcher-thumb-bg`) are scoped to one component.
+
+Naming pattern: `--{category}-{role}-{variant}-{state}`
+- Good: `--color-action-primary-bg-hover`, `--color-text-eyebrow`, `--card-padding-block`
+- Bad: `--pink-button`, `--big-text`, `--color-2`, `--classy-black`
+
+## Hard rules
+1. **No raw values in components or pages.** No hex, rgb, px, rem, or ms literals in `base.css`, `layout.css`, `components/*`, or inline styles. Exceptions: `0`, `100%`, `1fr`, `auto`, and `calc()` math on tokens.
+2. **Components only reference semantic or component tokens**, never primitives.
+3. **Theme files are mirrors.** Every token in `theme-classy.css` must exist in `theme-playful.css` with the same name. Adding a token to one means adding it to both, in the same section, in the same order.
+4. **Layout never changes per theme.** Grid columns, grid areas, bento spans, and gaps live in `semantic.css` and `layout.css`. Themes may change surfaces (bg, border, radius, shadow, padding, decoration), never the grid shape.
+5. **Never write `[data-theme]` selectors in component CSS.** If a component needs to look different per theme, create a component token and give it different values in each theme file.
+6. Use semantic HTML (`header`, `nav`, `main`, `article`, `section`, `figure`, `blockquote`). Meet WCAG 2.2 AA contrast. Every interactive element needs a visible focus state using `--color-focus-ring`, `--focus-ring-width`, and `--focus-ring-offset`.
+
+## The bento → editorial trick
+- One `.bento` grid (12 columns, `grid-template-areas` or spans) and one `.card` component.
+- **Playful:** cards are filled bubbles (`--card-bg`, `--card-radius`, `--card-shadow`, `--card-border-width`).
+- **Classy:** the same cards with `--card-bg: transparent`, radius 0, no shadow, and a top rule via `--card-divider`. Same DOM, same grid areas.
+- Alternate fills with `.card--alt`, which uses `--card-bg-alt`.
+- Decorations (bubbles, dotted lines, sketches) are `aria-hidden="true"` elements styled with `display: var(--decor-display)`.
+
+## Highlighter
+`.highlight { background: var(--highlight-background); }` wrapped around key phrases. Classy draws a yellow marker swipe; Playful draws a pink block.
+
+## Eyebrows
+`.eyebrow` uses `--font-eyebrow`, `--text-size-eyebrow`, `--color-text-eyebrow`, `--letter-spacing-eyebrow`, `--text-transform-eyebrow`, and `--font-weight-eyebrow`. In Classy it's teal uppercase; in Playful it's a pink sentence-case label.
+
+## Theme switcher spec
+- Markup: a `<fieldset class="theme-switcher">` with a `<legend>` reading "I'm feelin…", and three radio inputs with labels: Classy, Playful, Cozy. Cozy is `disabled` with a small "soon" tag.
+- Visually a segmented pill in the top-right of the nav. The legend sits inline to the left, so it reads "I'm feelin… [Classy | Playful | Cozy]".
+- A sliding thumb (`--switcher-thumb-bg`) moves under the active option using `--motion-duration-theme` and `--motion-ease-theme`.
+- On change, `js/theme.js`:
+  1. sets `document.documentElement.dataset.theme`
+  2. saves the choice to `localStorage` (wrapped in try/catch)
+  3. wraps the change in `document.startViewTransition()` when supported, otherwise switches instantly
+- An inline `<script>` in `<head>`, before the CSS, reads `localStorage` and sets `data-theme` so there's no flash of the wrong theme. Default is `classy`.
+- Respect `prefers-reduced-motion` (already zeroed in `semantic.css`).
+
+## Components to build (in this order)
+1. Typography: display, h1, h2, h3, eyebrow, body, body-lg, small, emphasis, highlight
+2. Buttons: primary, secondary, link (plus hover, active, focus, and disabled states)
+3. Theme switcher
+4. Nav
+5. Tag / chip
+6. Divider (rule + decorative shape)
+7. Card: case study thumbnail
+8. Card: speaking / writing row
+9. Case study header: title, role, timeline, company, type
+10. Quote: subtle and loud
+11. Callout: subtle and loud
+12. Bento grid layout
+
+## Workflow: homepage ↔ design system
+- Build every component in `styleguide.html` first, shown in both themes, before using it on `index.html`.
+- When a homepage change needs a new value or variant:
+  1. Add or adjust the token in BOTH theme files (or in `semantic.css` if theme-invariant).
+  2. Update the component CSS to use the token.
+  3. Add or update the example in `styleguide.html`.
+  4. Only then use it on the homepage.
+- Never fix a visual problem by overriding a component inside page-specific CSS.
+- After any change, check the page in both themes.
+
+## Adding the Cozy theme later
+Duplicate `theme-playful.css` as `theme-cozy.css` with the selector `[data-theme="cozy"]` and `color-scheme: dark`. Add any new primitives (charcoal, soft grey, warm glow) to `primitives.css`. Change values only, never names. Then enable the Cozy radio.

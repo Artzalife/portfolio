@@ -1,0 +1,155 @@
+/* ==========================================================================
+   PRIMITIVES — tier 1
+   Raw values only. Names describe WHAT a value is, never what it's FOR.
+   Components and pages must NEVER reference these directly.
+   Only semantic.css and theme-*.css may point at them.
+   ========================================================================== */
+
+:root {
+  /* ---------- Color: neutral ---------- */
+  --neutral-0:    #ffffff;
+  --neutral-50:   #fafaf9;
+  --neutral-100:  #f2f1ee;
+  --neutral-200:  #e4e2dd;
+  --neutral-300:  #cfccc5;
+  --neutral-400:  #a8a49b;
+  --neutral-500:  #7c786f;
+  --neutral-600:  #57544d;
+  --neutral-700:  #3b3934;
+  --neutral-800:  #26241f;
+  --neutral-900:  #161512;
+  --neutral-1000: #000000;
+
+  /* ---------- Color: yellow (highlighter) ---------- */
+  --yellow-100: #fffbd6;
+  --yellow-200: #fff6a8;
+  --yellow-300: #ffef6b;
+  --yellow-400: #ffe83d;
+  --yellow-500: #f5d400;
+
+  /* ---------- Color: teal (text accents) ---------- */
+  --teal-100: #ddf6f5;
+  --teal-300: #5fd4d0;
+  --teal-500: #0e9e9a;
+  --teal-600: #0b7f7c; /* 4.8:1 on white — safe for small text */
+  --teal-700: #08625f;
+
+  /* ---------- Color: pink (riso fluorescent) ---------- */
+  --pink-50:  #fef3f9;
+  --pink-100: #fde4f1;
+  --pink-200: #f9c6e1;
+  --pink-400: #f06bb0;
+  --pink-500: #e0479a; /* decorative only — fails AA with white text */
+  --pink-600: #c42d7f; /* 5.2:1 with white text — use for buttons */
+  --pink-700: #a01f67;
+
+  /* ---------- Color: blue (riso federal blue) ---------- */
+  --blue-50:  #f4f6fd;
+  --blue-100: #e3e8fb;
+  --blue-200: #c7d1f5;
+  --blue-400: #5a6fd6;
+  --blue-600: #2e3fa3;
+  --blue-700: #24338a;
+  --blue-800: #1b2669;
+
+  /* ---------- Color: paper ---------- */
+  --paper-warm: #f6f2ea;
+
+  /* ---------- Font families ---------- */
+  --font-family-serif: "Fraunces", Georgia, "Times New Roman", serif;
+  --font-family-sans: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-family-grotesk: "Space Grotesk", system-ui, sans-serif;
+  --font-family-mono: ui-monospace, "SF Mono", Menlo, monospace;
+
+  /* ---------- Font weights ---------- */
+  --font-weight-300: 300;
+  --font-weight-400: 400;
+  --font-weight-500: 500;
+  --font-weight-600: 600;
+  --font-weight-700: 700;
+
+  /* ---------- Fluid type scale (Utopia-style, 360px → 1240px, ratio 1.2) ----------
+     Regenerate at utopia.fyi/type/calculator if you change the range. */
+  --font-size-step--1: clamp(0.83rem, 0.80rem + 0.15vw, 0.92rem);
+  --font-size-step-0:  clamp(1.00rem, 0.95rem + 0.23vw, 1.13rem);
+  --font-size-step-1:  clamp(1.20rem, 1.12rem + 0.36vw, 1.41rem);
+  --font-size-step-2:  clamp(1.44rem, 1.32rem + 0.54vw, 1.76rem);
+  --font-size-step-3:  clamp(1.73rem, 1.55rem + 0.80vw, 2.20rem);
+  --font-size-step-4:  clamp(2.07rem, 1.81rem + 1.16vw, 2.75rem);
+  --font-size-step-5:  clamp(2.49rem, 2.11rem + 1.66vw, 3.43rem);
+  --font-size-step-6:  clamp(2.99rem, 2.45rem + 2.38vw, 4.29rem);
+
+  /* ---------- Line heights ---------- */
+  --line-height-tight: 1.05;
+  --line-height-snug: 1.2;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.65;
+
+  /* ---------- Letter spacing ---------- */
+  --letter-spacing-tighter: -0.03em;
+  --letter-spacing-tight: -0.015em;
+  --letter-spacing-normal: 0;
+  --letter-spacing-wide: 0.08em;
+  --letter-spacing-wider: 0.14em;
+
+  /* ---------- Fluid space scale (Utopia-style) ---------- */
+  --space-3xs: clamp(0.25rem, 0.23rem + 0.11vw, 0.31rem);
+  --space-2xs: clamp(0.50rem, 0.48rem + 0.11vw, 0.56rem);
+  --space-xs:  clamp(0.75rem, 0.72rem + 0.17vw, 0.84rem);
+  --space-s:   clamp(1.00rem, 0.95rem + 0.23vw, 1.13rem);
+  --space-m:   clamp(1.50rem, 1.43rem + 0.34vw, 1.69rem);
+  --space-l:   clamp(2.00rem, 1.91rem + 0.45vw, 2.25rem);
+  --space-xl:  clamp(3.00rem, 2.86rem + 0.68vw, 3.38rem);
+  --space-2xl: clamp(4.00rem, 3.82rem + 0.91vw, 4.50rem);
+  --space-3xl: clamp(6.00rem, 5.73rem + 1.36vw, 6.75rem);
+
+  /* ---------- Radius ---------- */
+  --radius-0: 0;
+  --radius-2: 2px;
+  --radius-6: 6px;
+  --radius-12: 12px;
+  --radius-20: 20px;
+  --radius-28: 28px;
+  --radius-pill: 999px;
+
+  /* ---------- Border widths ---------- */
+  --border-width-0: 0;
+  --border-width-1: 1px;
+  --border-width-2: 2px;
+  --border-width-3: 3px;
+
+  /* ---------- Shadows ---------- */
+  --shadow-none: none;
+  --shadow-soft-sm: 0 1px 2px rgb(0 0 0 / 0.06), 0 2px 6px rgb(0 0 0 / 0.04);
+  --shadow-soft-md: 0 4px 12px rgb(0 0 0 / 0.08);
+  /* Hard offset (riso) shadows take a color at the semantic layer:
+     box-shadow: var(--shadow-offset-md) var(--some-color); */
+  --shadow-offset-sm: 3px 3px 0;
+  --shadow-offset-md: 6px 6px 0;
+  --shadow-offset-lg: 8px 8px 0;
+
+  /* ---------- Motion: durations ---------- */
+  --duration-instant: 80ms;
+  --duration-fast: 160ms;
+  --duration-base: 280ms;
+  --duration-slow: 450ms;
+  --duration-slower: 600ms;
+
+  /* ---------- Motion: easings ---------- */
+  --ease-linear: linear;
+  --ease-out-smooth: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out-smooth: cubic-bezier(0.65, 0, 0.35, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);      /* gentle overshoot */
+  --ease-spring-bouncy: cubic-bezier(0.68, -0.6, 0.32, 1.6); /* big bounce */
+
+  /* ---------- Size ---------- */
+  --size-container-narrow: 42rem;  /* ~65ch reading width */
+  --size-container-default: 75rem; /* 1200px */
+  --size-container-wide: 90rem;
+
+  /* ---------- Z-index ---------- */
+  --z-base: 0;
+  --z-raised: 10;
+  --z-sticky: 100;
+  --z-overlay: 1000;
+}

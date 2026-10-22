@@ -1,0 +1,52 @@
+/* ==========================================================================
+   SEMANTIC (SHARED) — tier 2, theme-invariant
+   Roles that stay the SAME in every theme: type sizes, spacing roles, layout.
+   Keeping layout here (not in theme files) is what guarantees the bento grid
+   holds its shape when the theme switches.
+
+   Naming: --{category}-{role}-{variant}-{state}
+   ========================================================================== */
+
+:root {
+  /* ---------- Type size roles ---------- */
+  --text-size-display: var(--font-size-step-6);
+  --text-size-h1: var(--font-size-step-5);
+  --text-size-h2: var(--font-size-step-3);
+  --text-size-h3: var(--font-size-step-1);
+  --text-size-body-lg: var(--font-size-step-1);
+  --text-size-body: var(--font-size-step-0);
+  --text-size-small: var(--font-size-step--1);
+  --text-size-eyebrow: var(--font-size-step--1);
+
+  /* ---------- Spacing roles ---------- */
+  --space-stack-tight: var(--space-2xs);   /* between label + value */
+  --space-stack-default: var(--space-s);   /* between paragraphs */
+  --space-stack-loose: var(--space-l);     /* between groups */
+  --space-section: var(--space-3xl);       /* between page sections */
+  --space-inline-default: var(--space-xs); /* between inline items */
+  --space-gutter: var(--space-m);          /* page side padding */
+
+  /* ---------- Layout ---------- */
+  --layout-max-width: var(--size-container-default);
+  --layout-reading-width: var(--size-container-narrow);
+  --layout-columns: 12;
+  --layout-gap: var(--space-m);
+  --layout-bento-gap: var(--space-s);
+  --layout-bento-row-height: minmax(12rem, auto);
+
+  /* ---------- Focus (accessibility — same treatment everywhere) ---------- */
+  --focus-ring-width: var(--border-width-3);
+  --focus-ring-offset: 3px;
+
+  /* ---------- Z roles ---------- */
+  --z-nav: var(--z-sticky);
+}
+
+/* Respect reduced motion in every theme */
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --motion-duration-theme: 0ms !important;
+    --motion-duration-hover: 0ms !important;
+    --motion-hover-lift: 0 !important;
+  }
+}

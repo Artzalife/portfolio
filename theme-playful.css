@@ -1,0 +1,161 @@
+/* ==========================================================================
+   THEME: PLAYFUL — tier 2 (semantic) + tier 3 (component)
+   Riso-inspired: fluorescent pink + federal blue on blue-tinted off-white.
+   Bento boxes switch ON — filled bubbles with hard offset shadows.
+
+   RULE: must define exactly the same token names as theme-classy.css.
+   ========================================================================== */
+
+[data-theme="playful"] {
+  color-scheme: light;
+
+  /* ======================= SEMANTIC: color ======================= */
+
+  /* Backgrounds */
+  --color-bg-page: var(--blue-50);
+  --color-bg-surface: var(--neutral-0);
+  --color-bg-surface-raised: var(--neutral-0);
+  --color-bg-tint-1: var(--pink-100);
+  --color-bg-tint-2: var(--blue-100);
+  --color-bg-inverse: var(--blue-700);
+
+  /* Text */
+  --color-text-primary: var(--blue-800);
+  --color-text-secondary: var(--blue-600);
+  --color-text-inverse: var(--neutral-0);
+  --color-text-accent: var(--pink-600);
+  --color-text-eyebrow: var(--pink-600);
+  --color-text-link: var(--blue-700);
+  --color-text-link-hover: var(--pink-600);
+
+  /* Highlight */
+  --color-highlight: var(--pink-200);
+
+  /* Borders */
+  --color-border-strong: var(--blue-600);
+  --color-border-subtle: var(--blue-200);
+  --color-focus-ring: var(--pink-500);
+
+  /* Decorative */
+  --color-decor-1: var(--pink-400);
+  --color-decor-2: var(--blue-400);
+
+  /* Actions */
+  --color-action-primary-bg: var(--pink-600);
+  --color-action-primary-bg-hover: var(--pink-700);
+  --color-action-primary-text: var(--neutral-0);
+  --color-action-secondary-bg: var(--neutral-0);
+  --color-action-secondary-bg-hover: var(--blue-100);
+  --color-action-secondary-text: var(--blue-700);
+  --color-action-secondary-border: var(--blue-600);
+
+  /* ======================= SEMANTIC: typography ======================= */
+  --font-display: var(--font-family-grotesk);
+  --font-heading: var(--font-family-grotesk);
+  --font-body: var(--font-family-grotesk);
+  --font-eyebrow: var(--font-family-grotesk);
+
+  --font-weight-display: var(--font-weight-700);
+  --font-weight-heading: var(--font-weight-600);
+  --font-weight-body: var(--font-weight-400);
+  --font-weight-strong: var(--font-weight-600);
+  --font-weight-eyebrow: var(--font-weight-600);
+
+  --font-style-emphasis: normal;          /* emphasis via color, not italic */
+
+  --letter-spacing-display: var(--letter-spacing-tighter);
+  --letter-spacing-eyebrow: var(--letter-spacing-normal);
+  --text-transform-eyebrow: none;          /* eyebrows become "Brief & palette" pills */
+
+  --line-height-display: var(--line-height-tight);
+  --line-height-heading: var(--line-height-snug);
+  --line-height-body: var(--line-height-normal);
+
+  /* Full-block highlight (like a riso ink pass) */
+  --highlight-background: linear-gradient(
+    var(--color-highlight),
+    var(--color-highlight)
+  );
+
+  /* ======================= SEMANTIC: shape ======================= */
+  --radius-control: var(--radius-pill);
+  --radius-card: var(--radius-28);
+  --radius-tag: var(--radius-pill);
+  --radius-image: var(--radius-20);
+
+  --border-width-default: var(--border-width-2);
+  --border-style-divider: dotted;
+
+  --shadow-card: var(--shadow-offset-md) var(--blue-600);
+  --shadow-card-hover: var(--shadow-offset-lg) var(--blue-600);
+  --shadow-control: var(--shadow-offset-sm) var(--blue-700);
+
+  /* ======================= SEMANTIC: motion ======================= */
+  --motion-duration-theme: var(--duration-slower);
+  --motion-ease-theme: var(--ease-spring);         /* bouncy */
+  --motion-duration-hover: var(--duration-base);
+  --motion-ease-hover: var(--ease-spring);
+  --motion-hover-lift: -3px;
+
+  /* ======================= COMPONENT: card / bento ======================= */
+  /* The trick: same grid, boxes switched on. */
+  --card-bg: var(--color-bg-tint-1);
+  --card-bg-alt: var(--color-bg-tint-2);
+  --card-border-width: var(--border-width-2);
+  --card-border-color: var(--color-border-strong);
+  --card-divider: none;
+  --card-radius: var(--radius-card);
+  --card-shadow: var(--shadow-card);
+  --card-shadow-hover: var(--shadow-card-hover);
+  --card-padding-block: var(--space-l);
+  --card-padding-inline: var(--space-l);
+
+  /* ======================= COMPONENT: button ======================= */
+  --button-radius: var(--radius-control);
+  --button-border-width: var(--border-width-2);
+  --button-padding-block: var(--space-xs);
+  --button-padding-inline: var(--space-m);
+  --button-font: var(--font-body);
+  --button-font-weight: var(--font-weight-600);
+  --button-shadow: var(--shadow-control);
+
+  /* ======================= COMPONENT: link ======================= */
+  --link-underline-color: var(--color-text-accent);
+  --link-underline-thickness: 2px;
+  --link-underline-offset: 0.2em;
+
+  /* ======================= COMPONENT: tag ======================= */
+  --tag-bg: var(--color-bg-surface);
+  --tag-text: var(--color-text-secondary);
+  --tag-border: var(--border-width-1) solid var(--color-border-subtle);
+
+  /* ======================= COMPONENT: quote & callout ======================= */
+  --quote-font: var(--font-display);
+  --quote-font-style: normal;
+  --quote-mark-color: var(--color-text-accent);
+  --quote-rule: none;
+
+  --callout-subtle-bg: var(--color-bg-tint-2);
+  --callout-subtle-border: var(--border-width-2) dotted var(--color-border-strong);
+  --callout-loud-bg: var(--color-action-primary-bg);
+  --callout-loud-text: var(--color-text-inverse);
+  --callout-loud-accent: var(--pink-100);
+
+  /* ======================= COMPONENT: divider ======================= */
+  --divider-color: var(--color-border-strong);
+  --divider-width: var(--border-width-2);
+  --divider-style: dotted;
+
+  /* ======================= COMPONENT: theme switcher ======================= */
+  --switcher-bg: var(--neutral-0);
+  --switcher-border: var(--border-width-2) solid var(--color-border-strong);
+  --switcher-radius: var(--radius-pill);
+  --switcher-label-color: var(--color-text-secondary);
+  --switcher-option-text: var(--color-text-secondary);
+  --switcher-option-text-active: var(--color-text-inverse);
+  --switcher-thumb-bg: var(--color-action-primary-bg);
+
+  /* ======================= COMPONENT: decorations ======================= */
+  --decor-display: block;
+  --decor-opacity: 1;
+}

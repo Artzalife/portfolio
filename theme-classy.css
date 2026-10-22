@@ -1,0 +1,165 @@
+/* ==========================================================================
+   THEME: CLASSY — tier 2 (semantic) + tier 3 (component)
+   Editorial: black & white, yellow highlighter, teal text accents.
+   Bento boxes "disappear" — cards become hairline-ruled editorial columns.
+
+   RULE: every token defined here MUST also be defined in theme-playful.css
+   (and later theme-cozy.css). Same names, different values.
+   :root is included so Classy is the default with no attribute set.
+   ========================================================================== */
+
+:root,
+[data-theme="classy"] {
+  color-scheme: light;
+
+  /* ======================= SEMANTIC: color ======================= */
+
+  /* Backgrounds */
+  --color-bg-page: var(--neutral-0);
+  --color-bg-surface: var(--neutral-0);
+  --color-bg-surface-raised: var(--neutral-50);
+  --color-bg-tint-1: var(--neutral-50);
+  --color-bg-tint-2: var(--neutral-100);
+  --color-bg-inverse: var(--neutral-900);
+
+  /* Text */
+  --color-text-primary: var(--neutral-900);
+  --color-text-secondary: var(--neutral-600);
+  --color-text-inverse: var(--neutral-0);
+  --color-text-accent: var(--teal-600);
+  --color-text-eyebrow: var(--teal-600);
+  --color-text-link: var(--neutral-900);
+  --color-text-link-hover: var(--teal-700);
+
+  /* Highlight (the marker swipe behind key phrases) */
+  --color-highlight: var(--yellow-300);
+
+  /* Borders */
+  --color-border-strong: var(--neutral-900);
+  --color-border-subtle: var(--neutral-200);
+  --color-focus-ring: var(--teal-500);
+
+  /* Decorative */
+  --color-decor-1: var(--yellow-300);
+  --color-decor-2: var(--teal-300);
+
+  /* Actions */
+  --color-action-primary-bg: var(--neutral-900);
+  --color-action-primary-bg-hover: var(--neutral-700);
+  --color-action-primary-text: var(--neutral-0);
+  --color-action-secondary-bg: transparent;
+  --color-action-secondary-bg-hover: var(--yellow-200);
+  --color-action-secondary-text: var(--neutral-900);
+  --color-action-secondary-border: var(--neutral-900);
+
+  /* ======================= SEMANTIC: typography ======================= */
+  --font-display: var(--font-family-serif);
+  --font-heading: var(--font-family-serif);
+  --font-body: var(--font-family-sans);
+  --font-eyebrow: var(--font-family-sans);
+
+  --font-weight-display: var(--font-weight-400);
+  --font-weight-heading: var(--font-weight-500);
+  --font-weight-body: var(--font-weight-400);
+  --font-weight-strong: var(--font-weight-600);
+  --font-weight-eyebrow: var(--font-weight-600);
+
+  --font-style-emphasis: italic;          /* "actually use." style accent */
+
+  --letter-spacing-display: var(--letter-spacing-tight);
+  --letter-spacing-eyebrow: var(--letter-spacing-wider);
+  --text-transform-eyebrow: uppercase;
+
+  --line-height-display: var(--line-height-tight);
+  --line-height-heading: var(--line-height-snug);
+  --line-height-body: var(--line-height-relaxed);
+
+  /* Marker-under highlight: covers bottom ~45% of the text */
+  --highlight-background: linear-gradient(
+    transparent 55%,
+    var(--color-highlight) 55%
+  );
+
+  /* ======================= SEMANTIC: shape ======================= */
+  --radius-control: var(--radius-0);
+  --radius-card: var(--radius-0);
+  --radius-tag: var(--radius-2);
+  --radius-image: var(--radius-0);
+
+  --border-width-default: var(--border-width-1);
+  --border-style-divider: solid;
+
+  --shadow-card: var(--shadow-none);
+  --shadow-card-hover: var(--shadow-none);
+  --shadow-control: var(--shadow-none);
+
+  /* ======================= SEMANTIC: motion ======================= */
+  --motion-duration-theme: var(--duration-slow);
+  --motion-ease-theme: var(--ease-out-smooth);   /* smooth, not bouncy */
+  --motion-duration-hover: var(--duration-fast);
+  --motion-ease-hover: var(--ease-out-smooth);
+  --motion-hover-lift: 0;                        /* editorial = no lift */
+
+  /* ======================= COMPONENT: card / bento ======================= */
+  /* The trick: same grid, boxes switched off. */
+  --card-bg: transparent;
+  --card-bg-alt: transparent;
+  --card-border-width: var(--border-width-0);
+  --card-border-color: transparent;
+  --card-divider: var(--border-width-1) var(--border-style-divider) var(--color-border-strong);
+  --card-radius: var(--radius-card);
+  --card-shadow: var(--shadow-card);
+  --card-shadow-hover: var(--shadow-card-hover);
+  --card-padding-block: var(--space-m);
+  --card-padding-inline: 0;
+
+  /* ======================= COMPONENT: button ======================= */
+  --button-radius: var(--radius-control);
+  --button-border-width: var(--border-width-1);
+  --button-padding-block: var(--space-xs);
+  --button-padding-inline: var(--space-m);
+  --button-font: var(--font-body);
+  --button-font-weight: var(--font-weight-500);
+  --button-shadow: var(--shadow-control);
+
+  /* ======================= COMPONENT: link ======================= */
+  --link-underline-color: var(--color-highlight);
+  --link-underline-thickness: 0.35em;
+  --link-underline-offset: -0.15em;   /* sits behind text like a marker */
+
+  /* ======================= COMPONENT: tag ======================= */
+  --tag-bg: transparent;
+  --tag-text: var(--color-text-secondary);
+  --tag-border: var(--border-width-1) solid var(--color-border-subtle);
+
+  /* ======================= COMPONENT: quote & callout ======================= */
+  --quote-font: var(--font-display);
+  --quote-font-style: italic;
+  --quote-mark-color: var(--color-text-accent);
+  --quote-rule: var(--border-width-2) solid var(--color-border-strong);
+
+  --callout-subtle-bg: transparent;
+  --callout-subtle-border: var(--border-width-1) solid var(--color-border-subtle);
+  --callout-loud-bg: var(--color-bg-inverse);
+  --callout-loud-text: var(--color-text-inverse);
+  --callout-loud-accent: var(--color-highlight);
+
+  /* ======================= COMPONENT: divider ======================= */
+  --divider-color: var(--color-border-strong);
+  --divider-width: var(--border-width-1);
+  --divider-style: solid;
+
+  /* ======================= COMPONENT: theme switcher ======================= */
+  --switcher-bg: var(--neutral-0);
+  --switcher-border: var(--border-width-1) solid var(--color-border-strong);
+  --switcher-radius: var(--radius-pill);
+  --switcher-label-color: var(--color-text-secondary);
+  --switcher-option-text: var(--color-text-secondary);
+  --switcher-option-text-active: var(--color-text-inverse);
+  --switcher-thumb-bg: var(--color-bg-inverse);
+
+  /* ======================= COMPONENT: decorations ======================= */
+  /* Bubbles, squiggles, sketches — hidden in Classy */
+  --decor-display: none;
+  --decor-opacity: 0;
+}
