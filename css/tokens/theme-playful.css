@@ -93,10 +93,10 @@
   --border-width-default: var(--border-width-2);
   --border-style-divider: dotted;
 
-  /* Soft shadows only — no hard riso offsets */
+  /* Cards: soft glass shadows. Controls/buttons: hard riso offset (sticker pop). */
   --shadow-card: 0 2px 8px rgb(46 63 163 / 0.06), 0 8px 32px rgb(46 63 163 / 0.10);
   --shadow-card-hover: 0 4px 12px rgb(46 63 163 / 0.08), 0 16px 48px rgb(46 63 163 / 0.14);
-  --shadow-control: 0 2px 8px rgb(46 63 163 / 0.08), 0 4px 16px rgb(46 63 163 / 0.06);
+  --shadow-control: var(--shadow-offset-sm) var(--blue-700);
 
   /* ======================= SEMANTIC: motion ======================= */
   --motion-duration-theme: var(--duration-slower);
