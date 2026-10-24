@@ -69,6 +69,12 @@ Naming pattern: `--{category}-{role}-{variant}-{state}`
 ## Eyebrows
 `.eyebrow` uses `--font-eyebrow`, `--text-size-eyebrow`, `--color-text-eyebrow`, `--letter-spacing-eyebrow`, `--text-transform-eyebrow`, and `--font-weight-eyebrow`. In Classy it's teal uppercase; in Playful it's a pink sentence-case label.
 
+### Accessibility (eyebrow contrast)
+- `--color-text-eyebrow` must meet **WCAG 2.2 AA** for normal text (**≥ ~4.5:1**) on default page/surface backgrounds.
+- **Classy (default):** `teal-600` on white / `--color-bg-page` / `--color-bg-surface` — AA-safe as shipped.
+- **Playful (default):** `pink-600` on page/surface (`--color-bg-page` / `--color-bg-surface`) — AA-safe as shipped.
+- **Tinted cards later:** if `.eyebrow` sits on a tinted card (`--card-bg`, `--color-bg-tint-*`, etc.), **darken the eyebrow token one step** so contrast stays ≥ 4.5:1 — e.g. Classy → `teal-700`, Playful → `pink-700` (add a surface-specific component token if needed; do not leave `*-600` on tint).
+
 ## Theme switcher spec
 - Markup: a `<fieldset class="theme-switcher">` with a `<legend>` reading "I'm feelin…", and three radio inputs with labels: Classy, Playful, Cozy. Cozy is `disabled` with a small "soon" tag.
 - Visually a segmented pill in the top-right of the nav. The legend sits inline to the left, so it reads "I'm feelin… [Classy | Playful | Cozy]".

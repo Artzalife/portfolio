@@ -28,7 +28,7 @@
   --color-text-secondary: var(--neutral-600);
   --color-text-inverse: var(--neutral-0);
   --color-text-accent: var(--teal-600);
-  --color-text-eyebrow: var(--teal-600);
+  --color-text-eyebrow: var(--teal-600); /* AA on page/surface; use teal-700 on tinted cards — see design-system.mdc Eyebrows */
   --color-text-link: var(--neutral-900);
   --color-text-link-hover: var(--teal-700);
 
