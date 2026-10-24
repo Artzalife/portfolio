@@ -1,0 +1,14 @@
+/* ==========================================================================
+   DIVIDER — horizontal rule (theme border style)
+   ========================================================================== */
+
+.divider {
+  display: block;
+  width: 100%;
+  height: 0;
+  margin-block: var(--space-stack-loose);
+  border: none;
+  border-block-start-width: var(--divider-width);
+  border-block-start-style: var(--divider-style);
+  border-block-start-color: var(--divider-color);
+}

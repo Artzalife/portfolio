@@ -19,12 +19,33 @@
   --text-size-eyebrow: var(--font-size-step--1);
 
   /* ---------- Spacing roles ---------- */
-  --space-stack-tight: var(--space-2xs);   /* between label + value */
-  --space-stack-default: var(--space-s);   /* between paragraphs */
-  --space-stack-loose: var(--space-l);     /* between groups */
-  --space-section: var(--space-3xl);       /* between page sections */
-  --space-inline-default: var(--space-xs); /* between inline items */
-  --space-gutter: var(--space-m);          /* page side padding */
+  --space-stack-tight: var(--space-2xs);   /* 8 — between label + value */
+  --space-stack-default: var(--space-s);   /* 16 — between paragraphs */
+  --space-stack-loose: var(--space-l);     /* 32 — between groups */
+  --space-section: var(--space-4xl);       /* 120 — between page sections */
+  --space-inline-default: var(--space-xs); /* 12 — between inline items */
+  --space-gutter: var(--space-m);          /* 24 — page side padding */
+
+  /* ---------- Space scale steps (8pt — for specimens / direct use) ---------- */
+  --space-step-4: var(--space-3xs);
+  --space-step-8: var(--space-2xs);
+  --space-step-12: var(--space-xs);
+  --space-step-16: var(--space-s);
+  --space-step-24: var(--space-m);
+  --space-step-32: var(--space-l);
+  --space-step-48: var(--space-xl);
+  --space-step-64: var(--space-2xl);
+  --space-step-80: var(--space-3xl);
+  --space-step-120: var(--space-4xl);
+
+  /* ---------- Radius scale (theme-invariant steps) ---------- */
+  --radius-scale-0: var(--radius-0);
+  --radius-scale-2: var(--radius-2);
+  --radius-scale-6: var(--radius-6);
+  --radius-scale-12: var(--radius-12);
+  --radius-scale-20: var(--radius-20);
+  --radius-scale-28: var(--radius-28);
+  --radius-scale-pill: var(--radius-pill);
 
   /* ---------- Layout ---------- */
   --layout-max-width: var(--size-container-default);

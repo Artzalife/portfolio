@@ -39,6 +39,9 @@ Load CSS in this order: primitives → semantic → theme-classy → theme-playf
 ```
 In `base.css`, `.text-display` / `h2` use `--font-display` + `--font-weight-display`; `h1` / `h3` use `--font-heading`.
 
+## Spacing (8pt grid)
+Fixed rem scale in `primitives.css` (root 16px): **4 · 8 · 12 · 16 · 24 · 32 · 48 · 64 · 80 · 120** → `--space-3xs` … `--space-4xl`. Semantic roles (`--space-stack-*`, `--space-gutter`, `--space-section`) and `--space-step-*` aliases live in `semantic.css`. Prefer roles in UI; use steps for exact grid values. Documented in `styleguide.html`.
+
 ## Token tiers
 1. **Primitives** (`--pink-600`, `--space-m`, `--radius-28`) describe WHAT a value is.
 2. **Semantic** (`--color-text-accent`, `--color-action-primary-bg`) describe WHAT IT'S FOR.

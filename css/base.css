@@ -261,3 +261,226 @@ small {
   font-weight: var(--font-weight-body);
   color: var(--color-text-secondary);
 }
+
+.sg-swatch-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: var(--space-stack-default);
+}
+
+.sg-swatch-row--center {
+  align-items: center;
+}
+
+.sg-space {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-stack-tight);
+}
+
+.sg-space__box {
+  width: var(--sg-space-size);
+  height: var(--sg-space-size);
+  background-color: var(--color-decor-1);
+  border-radius: var(--radius-scale-6);
+}
+
+.sg-space--4 {
+  --sg-space-size: var(--space-step-4);
+}
+
+.sg-space--8 {
+  --sg-space-size: var(--space-step-8);
+}
+
+.sg-space--12 {
+  --sg-space-size: var(--space-step-12);
+}
+
+.sg-space--16 {
+  --sg-space-size: var(--space-step-16);
+}
+
+.sg-space--24 {
+  --sg-space-size: var(--space-step-24);
+}
+
+.sg-space--32 {
+  --sg-space-size: var(--space-step-32);
+}
+
+.sg-space--48 {
+  --sg-space-size: var(--space-step-48);
+}
+
+.sg-space--64 {
+  --sg-space-size: var(--space-step-64);
+}
+
+.sg-space--80 {
+  --sg-space-size: var(--space-step-80);
+}
+
+.sg-space--120 {
+  --sg-space-size: var(--space-step-120);
+}
+
+.sg-space__value {
+  font-family: var(--font-body);
+  font-size: var(--text-size-small);
+  font-weight: var(--font-weight-strong);
+  color: var(--color-text-secondary);
+}
+
+.sg-color {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-stack-tight);
+  width: var(--space-step-80);
+}
+
+.sg-color__chip {
+  height: var(--space-step-64);
+  border-radius: var(--radius-scale-12);
+  background-color: var(--sg-color);
+  border-width: var(--border-width-default);
+  border-style: solid;
+  border-color: var(--color-border-subtle);
+  box-shadow: var(--shadow-control);
+}
+
+.sg-color--page {
+  --sg-color: var(--color-bg-page);
+}
+
+.sg-color--surface {
+  --sg-color: var(--color-bg-surface);
+}
+
+.sg-color--tint-1 {
+  --sg-color: var(--color-bg-tint-1);
+}
+
+.sg-color--tint-2 {
+  --sg-color: var(--color-bg-tint-2);
+}
+
+.sg-color--inverse {
+  --sg-color: var(--color-bg-inverse);
+}
+
+.sg-color--text {
+  --sg-color: var(--color-text-primary);
+}
+
+.sg-color--accent {
+  --sg-color: var(--color-text-accent);
+}
+
+.sg-color--highlight {
+  --sg-color: var(--color-highlight);
+}
+
+.sg-color--border {
+  --sg-color: var(--color-border-strong);
+}
+
+.sg-color--action {
+  --sg-color: var(--color-action-primary-bg);
+}
+
+.sg-color--focus {
+  --sg-color: var(--color-focus-ring);
+}
+
+.sg-radius {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-stack-tight);
+}
+
+.sg-radius__box {
+  width: var(--space-step-80);
+  height: var(--space-step-80);
+  background-color: var(--color-bg-tint-1);
+  border-width: var(--border-width-default);
+  border-style: solid;
+  border-color: var(--color-border-strong);
+  border-radius: var(--sg-radius);
+}
+
+.sg-radius--0 {
+  --sg-radius: var(--radius-scale-0);
+}
+
+.sg-radius--2 {
+  --sg-radius: var(--radius-scale-2);
+}
+
+.sg-radius--6 {
+  --sg-radius: var(--radius-scale-6);
+}
+
+.sg-radius--12 {
+  --sg-radius: var(--radius-scale-12);
+}
+
+.sg-radius--20 {
+  --sg-radius: var(--radius-scale-20);
+}
+
+.sg-radius--28 {
+  --sg-radius: var(--radius-scale-28);
+}
+
+.sg-radius--pill {
+  --sg-radius: var(--radius-scale-pill);
+}
+
+.sg-shadow {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-stack-tight);
+  padding: var(--space-stack-loose);
+}
+
+.sg-shadow__box {
+  width: var(--space-step-120);
+  height: var(--space-step-80);
+  background-color: var(--color-bg-surface);
+  border-radius: var(--radius-card);
+  box-shadow: var(--sg-shadow);
+}
+
+.sg-shadow--card {
+  --sg-shadow: var(--shadow-card);
+}
+
+.sg-shadow--card-hover {
+  --sg-shadow: var(--shadow-card-hover);
+}
+
+.sg-shadow--control {
+  --sg-shadow: var(--shadow-control);
+}
+
+.sg-focus-demo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding-block: var(--button-padding-block);
+  padding-inline: var(--button-padding-inline);
+  border-radius: var(--button-radius);
+  border-width: var(--button-border-width);
+  border-style: solid;
+  border-color: var(--color-border-strong);
+  background-color: var(--color-bg-surface);
+  color: var(--color-text-primary);
+  font-family: var(--button-font);
+  font-weight: var(--button-font-weight);
+  outline: var(--focus-ring-width) solid var(--color-focus-ring);
+  outline-offset: var(--focus-ring-offset);
+}

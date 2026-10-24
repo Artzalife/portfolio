@@ -1,0 +1,19 @@
+/* ==========================================================================
+   TAG / CHIP
+   ========================================================================== */
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-inline-default);
+  padding-block: var(--space-stack-tight);
+  padding-inline: var(--space-stack-default);
+  border-radius: var(--radius-tag);
+  border: var(--tag-border);
+  background-color: var(--tag-bg);
+  color: var(--tag-text);
+  font-family: var(--font-body);
+  font-size: var(--text-size-small);
+  font-weight: var(--font-weight-strong);
+  line-height: var(--line-height-heading);
+}
