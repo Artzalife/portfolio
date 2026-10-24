@@ -94,3 +94,170 @@
   inset-inline-start: var(--space-gutter);
   filter: blur(var(--decor-cloud-blur-b));
 }
+
+/* ---------- Shared case / subtle pieces ---------- */
+
+.card__media {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-color: var(--color-bg-tint-2);
+  border-radius: var(--card-media-radius);
+}
+
+.card__content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-stack-default);
+  min-width: 0;
+}
+
+.card__meta {
+  font-family: var(--font-body);
+  font-size: var(--text-size-small);
+  font-weight: var(--font-weight-body);
+  line-height: var(--line-height-heading);
+  color: var(--color-text-secondary);
+}
+
+.card__title--lg {
+  font-family: var(--font-display);
+  font-size: var(--text-size-h2);
+  font-weight: var(--font-weight-display);
+  letter-spacing: var(--letter-spacing-display);
+  line-height: var(--line-height-heading);
+  color: var(--color-text-primary);
+}
+
+.card__stat {
+  font-family: var(--font-body);
+  font-size: var(--text-size-body-lg);
+  font-weight: var(--font-weight-body);
+  line-height: var(--line-height-heading);
+  color: var(--color-text-primary);
+}
+
+.card__stat strong {
+  font-weight: var(--font-weight-strong);
+}
+
+.card__role {
+  font-family: var(--font-body);
+  font-size: var(--text-size-body);
+  font-weight: var(--font-weight-body);
+  font-style: var(--font-style-emphasis);
+  line-height: var(--line-height-body);
+  color: var(--color-text-secondary);
+}
+
+.card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-inline-default);
+}
+
+.card__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-inline-default);
+  margin-block-start: auto;
+  padding-block-start: var(--space-stack-tight);
+}
+
+/* ---------- Variation A — featured horizontal (inset media) ---------- */
+
+.card--case-a {
+  display: grid;
+  grid-template-columns: var(--card-case-columns);
+  align-items: stretch;
+  gap: var(--space-stack-loose);
+}
+
+.card--case-a .card__media {
+  aspect-ratio: var(--card-media-aspect-case);
+  min-height: 100%;
+}
+
+.card--subtle-a {
+  display: grid;
+  grid-template-columns: var(--card-subtle-columns);
+  align-items: stretch;
+  gap: var(--space-stack-default);
+}
+
+.card--subtle-a .card__media {
+  aspect-ratio: var(--card-media-aspect-subtle);
+}
+
+.card--subtle-a .card__title {
+  font-size: var(--text-size-h3);
+}
+
+/* ---------- Variation B — vertical flush media-top ---------- */
+
+.card--case-b,
+.card--subtle-b {
+  padding: 0;
+  gap: 0;
+  overflow: hidden;
+}
+
+.card--case-b .card__media,
+.card--subtle-b .card__media {
+  border-radius: 0;
+  aspect-ratio: var(--card-media-aspect-case);
+}
+
+.card--subtle-b .card__media {
+  aspect-ratio: var(--card-media-aspect-subtle);
+}
+
+.card--case-b .card__content,
+.card--subtle-b .card__content {
+  padding-block: var(--card-padding-block);
+  padding-inline: var(--card-padding-inline);
+  gap: var(--space-stack-default);
+}
+
+.card--subtle-b .card__content {
+  padding-block: var(--space-stack-loose);
+  gap: var(--space-stack-tight);
+}
+
+/* ---------- Variation C — vertical inset media ---------- */
+
+.card--case-c {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-stack-loose);
+}
+
+.card--case-c .card__media {
+  aspect-ratio: var(--card-media-aspect-case);
+}
+
+.card--subtle-c {
+  display: grid;
+  grid-template-columns: var(--card-subtle-columns);
+  align-items: stretch;
+  gap: var(--space-stack-default);
+  padding: 0;
+  overflow: hidden;
+}
+
+.card--subtle-c .card__media {
+  border-radius: 0;
+  aspect-ratio: auto;
+  min-height: 100%;
+  align-self: stretch;
+}
+
+.card--subtle-c .card__content {
+  padding-block: var(--space-stack-loose);
+  padding-inline: var(--card-padding-inline);
+  gap: var(--space-stack-tight);
+  justify-content: center;
+}

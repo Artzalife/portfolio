@@ -245,8 +245,13 @@ small {
 .sg-row {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
+  align-items: stretch;
   gap: var(--space-inline-default);
+}
+
+.sg-row > .card {
+  flex: 1 1 var(--space-step-120);
+  min-width: min(100%, var(--space-step-120));
 }
 
 .sg-specimen {

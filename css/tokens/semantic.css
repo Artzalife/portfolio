@@ -47,6 +47,12 @@
   --radius-scale-28: var(--radius-28);
   --radius-scale-pill: var(--radius-pill);
 
+  /* ---------- Card media layout (theme-invariant) ---------- */
+  --card-media-aspect-case: 4 / 3;
+  --card-media-aspect-subtle: 16 / 9;
+  --card-case-columns: minmax(0, 1fr) minmax(0, 1.15fr);
+  --card-subtle-columns: minmax(0, 0.42fr) minmax(0, 1fr);
+
   /* ---------- Layout ---------- */
   --layout-max-width: var(--size-container-default);
   --layout-reading-width: var(--size-container-narrow);
