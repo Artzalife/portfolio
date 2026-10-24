@@ -188,4 +188,8 @@
   --decor-cloud-height-b: var(--space-l);
   --decor-cloud-blur-a: var(--space-s);
   --decor-cloud-blur-b: var(--space-xs);
+
+  /* ======================= COMPONENT: styleguide theme labels ======================= */
+  --sg-only-classy: none;
+  --sg-only-playful: inline;
 }

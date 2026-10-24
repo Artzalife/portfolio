@@ -262,6 +262,15 @@ small {
   color: var(--color-text-secondary);
 }
 
+/* Theme-specific styleguide copy — visibility from theme tokens (no [data-theme]) */
+.sg-only-classy {
+  display: var(--sg-only-classy);
+}
+
+.sg-only-playful {
+  display: var(--sg-only-playful);
+}
+
 .sg-swatch-row {
   display: flex;
   flex-wrap: wrap;

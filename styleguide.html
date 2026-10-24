@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Styleguide — Alissa</title>
+    <title>Classy — Alissa</title>
     <script>
       (function () {
         var theme = "classy";
@@ -43,10 +43,21 @@
         <header class="sg-header">
           <div class="sg-header__intro">
             <p class="eyebrow">Design system</p>
-            <h1 class="text-h1">Styleguide</h1>
+            <h1 class="text-h1">
+              <span class="sg-only-classy">Classy</span>
+              <span class="sg-only-playful">Playful</span>
+            </h1>
             <p class="text-body-lg text-secondary">
-              Token browser: type, 8pt spacing, color roles, radius, shadows,
-              dividers, tags, cards, and buttons. Switch themes to compare.
+              <span class="sg-only-classy"
+                >Editorial tokens: Playfair + Plus Jakarta, hairline rules, yellow
+                highlighter. Browse type, spacing, color, radius, shadows, and
+                components.</span
+              >
+              <span class="sg-only-playful"
+                >Cloud tokens: Nunito + Instrument Sans, glass cards, soft
+                surfaces. Browse type, spacing, color, radius, shadows, and
+                components.</span
+              >
             </p>
           </div>
 
@@ -85,42 +96,48 @@
             <div class="sg-stack">
               <div class="sg-specimen">
                 <p class="sg-specimen__label">
-                  display · Classy: Playfair Bold · Playful: Nunito Black
+                  <span class="sg-only-classy">display · Playfair Bold</span>
+                  <span class="sg-only-playful">display · Nunito Black</span>
                 </p>
                 <p class="text-display">Product design, thoughtfully made.</p>
               </div>
 
               <div class="sg-specimen">
                 <p class="sg-specimen__label">
-                  h1 · Classy: Plus Jakarta Sans · Playful: Instrument Sans
+                  <span class="sg-only-classy">h1 · Plus Jakarta Sans</span>
+                  <span class="sg-only-playful">h1 · Instrument Sans</span>
                 </p>
                 <h1 class="text-h1">Case studies &amp; selected work</h1>
               </div>
 
               <div class="sg-specimen">
                 <p class="sg-specimen__label">
-                  h2 · Classy: Playfair Bold · Playful: Nunito Black
+                  <span class="sg-only-classy">h2 · Playfair Bold</span>
+                  <span class="sg-only-playful">h2 · Nunito Black</span>
                 </p>
                 <h2 class="text-h2">Brief, palette, and process</h2>
               </div>
 
               <div class="sg-specimen">
                 <p class="sg-specimen__label">
-                  h3 · Classy: Plus Jakarta Sans · Playful: Instrument Sans
+                  <span class="sg-only-classy">h3 · Plus Jakarta Sans</span>
+                  <span class="sg-only-playful">h3 · Instrument Sans</span>
                 </p>
                 <h3 class="text-h3">Research notes from the field</h3>
               </div>
 
               <div class="sg-specimen">
                 <p class="sg-specimen__label">
-                  eyebrow · Classy: Plus Jakarta · Playful: Space Grotesk
+                  <span class="sg-only-classy">eyebrow · Plus Jakarta Sans</span>
+                  <span class="sg-only-playful">eyebrow · Space Grotesk</span>
                 </p>
                 <p class="eyebrow">Brief &amp; palette</p>
               </div>
 
               <div class="sg-specimen">
                 <p class="sg-specimen__label">
-                  body-lg · Classy: Plus Jakarta · Playful: Instrument Sans
+                  <span class="sg-only-classy">body-lg · Plus Jakarta Sans</span>
+                  <span class="sg-only-playful">body-lg · Instrument Sans</span>
                 </p>
                 <p class="text-body-lg">
                   Larger supporting copy for intros and lead paragraphs that need
@@ -130,11 +147,12 @@
 
               <div class="sg-specimen">
                 <p class="sg-specimen__label">
-                  body · Classy: Plus Jakarta · Playful: Instrument Sans
+                  <span class="sg-only-classy">body · Plus Jakarta Sans</span>
+                  <span class="sg-only-playful">body · Instrument Sans</span>
                 </p>
                 <p class="text-body">
                   Body text for reading. Keep lines comfortable and contrast
-                  WCAG-friendly across both themes.
+                  WCAG-friendly.
                 </p>
               </div>
 
@@ -146,7 +164,10 @@
               </div>
 
               <div class="sg-specimen">
-                <p class="sg-specimen__label">emphasis · .emphasis</p>
+                <p class="sg-specimen__label">
+                  <span class="sg-only-classy">emphasis · italic teal accent</span>
+                  <span class="sg-only-playful">emphasis · pink accent</span>
+                </p>
                 <p class="text-body">
                   Design systems people will
                   <em class="emphasis">actually use.</em>
@@ -154,7 +175,10 @@
               </div>
 
               <div class="sg-specimen">
-                <p class="sg-specimen__label">highlight · .highlight</p>
+                <p class="sg-specimen__label">
+                  <span class="sg-only-classy">highlight · yellow marker swipe</span>
+                  <span class="sg-only-playful">highlight · lavender wash</span>
+                </p>
                 <p class="text-body-lg">
                   Mark the phrase that matters with a
                   <span class="highlight">highlighter swipe</span>
@@ -241,7 +265,12 @@
             <div class="sg-stack">
               <div class="sg-specimen">
                 <p class="sg-specimen__label">
-                  semantic roles · switch theme to compare Classy / Playful
+                  <span class="sg-only-classy"
+                    >semantic roles · editorial black, teal, yellow</span
+                  >
+                  <span class="sg-only-playful"
+                    >semantic roles · sky, navy, pink</span
+                  >
                 </p>
                 <div class="sg-swatch-row">
                   <div class="sg-color sg-color--page">
@@ -348,8 +377,10 @@
             <div class="sg-stack">
               <div class="sg-specimen">
                 <p class="sg-specimen__label">
-                  theme shadows · Classy: none · Playful: soft card / offset
-                  control
+                  <span class="sg-only-classy">shadows · none (editorial)</span>
+                  <span class="sg-only-playful"
+                    >shadows · soft card / navy offset control</span
+                  >
                 </p>
                 <div class="sg-swatch-row">
                   <div class="sg-shadow sg-shadow--card">
@@ -381,7 +412,8 @@
 
             <div class="sg-specimen">
               <p class="sg-specimen__label">
-                .divider · solid in Classy · dotted in Playful
+                <span class="sg-only-classy">.divider · solid hairline</span>
+                <span class="sg-only-playful">.divider · dotted</span>
               </p>
               <hr class="divider" />
             </div>
@@ -410,16 +442,29 @@
             <div class="sg-stack">
               <div class="sg-specimen">
                 <p class="sg-specimen__label">
-                  card · glass + iridescent edge in Playful; hairline rule in
-                  Classy
+                  <span class="sg-only-classy"
+                    >card · transparent + top hairline rule</span
+                  >
+                  <span class="sg-only-playful"
+                    >card · glass fill + iridescent edge</span
+                  >
                 </p>
                 <div class="sg-row">
                   <article class="card">
                     <p class="eyebrow">Case study</p>
-                    <h3 class="card__title">Soap-bubble surfaces</h3>
+                    <h3 class="card__title">
+                      <span class="sg-only-classy">Editorial columns</span>
+                      <span class="sg-only-playful">Soap-bubble surfaces</span>
+                    </h3>
                     <p class="card__body">
-                      Translucent fill, backdrop blur, and a quiet iridescent
-                      rim — premium air, not candy.
+                      <span class="sg-only-classy"
+                        >Same card DOM as Playful — boxes switch off into ruled
+                        columns.</span
+                      >
+                      <span class="sg-only-playful"
+                        >Translucent fill, backdrop blur, and a quiet iridescent
+                        rim — premium air, not candy.</span
+                      >
                     </p>
                   </article>
                   <article class="card card--alt">

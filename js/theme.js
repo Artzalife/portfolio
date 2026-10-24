@@ -35,6 +35,8 @@
       root.dataset.theme = next;
       root.style.setProperty("--switcher-thumb-index", String(themeIndex(next)));
       storeTheme(next);
+      document.title =
+        (next === "playful" ? "Playful" : "Classy") + " — Alissa";
 
       document
         .querySelectorAll('.theme-switcher input[name="theme"]')
