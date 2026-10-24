@@ -129,7 +129,7 @@
   font-size: var(--text-size-h2);
   font-weight: var(--font-weight-display);
   letter-spacing: var(--letter-spacing-display);
-  line-height: var(--line-height-body);
+  line-height: var(--line-height-heading);
   color: var(--color-text-primary);
 }
 
@@ -172,7 +172,7 @@
 .card--case-a > .card__content {
   grid-area: content;
   min-width: 0;
-  gap: var(--space-stack-loose);
+  gap: var(--space-stack-default);
   padding-block: var(--space-stack-default);
   justify-content: center;
 }
@@ -182,18 +182,16 @@
 }
 
 .card--case-a .card__body {
-  font-size: var(--text-size-body-lg);
-  line-height: var(--line-height-body);
   max-width: var(--layout-reading-width);
 }
 
 .card--case-a .card__tags {
-  gap: var(--space-stack-default);
-  padding-block-start: var(--space-stack-tight);
+  gap: var(--space-2xs);
+  padding-block-start: var(--space-step-4);
 }
 
 .card--case-a .card__actions {
-  padding-block-start: var(--space-stack-default);
+  padding-block-start: var(--space-stack-tight);
 }
 
 .card--case-a > .card__media {
