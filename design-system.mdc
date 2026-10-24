@@ -61,7 +61,7 @@ Naming pattern: `--{category}-{role}-{variant}-{state}`
 
 ## The bento → editorial trick
 - One `.bento` grid (12 columns, `grid-template-areas` or spans) and one `.card` component.
-- **Playful:** airy glass soap-bubble cards (`--card-bg` translucent, `--card-backdrop-filter`, `--card-edge` / `--card-edge-width` iridescent ring, soft `--card-shadow`). Page uses `--background-page` (sky gradient, fixed). No hard riso offset shadows.
+- **Playful:** airy glass soap-bubble cards (`--card-bg` translucent, `--card-backdrop-filter`, `--card-edge` / `--card-edge-width` iridescent ring, soft `--card-shadow`). Page uses `--background-page` (sky gradient, fixed). Buttons keep hard riso offset shadows via `--shadow-control` / `--button-shadow` (cards stay soft).
 - **Classy:** the same cards with `--card-bg: transparent`, radius 0, no shadow, `--card-backdrop-filter: none`, `--card-edge-width: 0`, and a top rule via `--card-divider`. Same DOM, same grid areas. `--background-page` equals solid `--color-bg-page`.
 - Alternate fills with `.card--alt`, which uses `--card-bg-alt`.
 - Decorations (clouds, bubbles, sketches) are `aria-hidden="true"` elements styled with `display: var(--decor-display)` and colors like `--decor-cloud-color`.
