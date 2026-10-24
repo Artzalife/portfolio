@@ -129,7 +129,7 @@
   font-size: var(--text-size-h2);
   font-weight: var(--font-weight-display);
   letter-spacing: var(--letter-spacing-display);
-  line-height: var(--line-height-body);
+  line-height: var(--line-height-heading);
   color: var(--color-text-primary);
 }
 
@@ -182,8 +182,6 @@
 }
 
 .card--case-a .card__body {
-  font-size: var(--text-size-body-lg);
-  line-height: var(--line-height-body);
   max-width: var(--layout-reading-width);
 }
 
