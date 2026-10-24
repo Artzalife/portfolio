@@ -34,7 +34,8 @@
   transform: translateY(var(--motion-hover-lift));
 }
 
-/* Iridescent edge ring — zero width / none fill in Classy (invisible) */
+/* Iridescent edge ring — zero width / none fill in Classy (invisible).
+   Keep out of grid flow so case-a two-column placement stays stable. */
 .card::after {
   content: "";
   position: absolute;
@@ -93,4 +94,168 @@
   inset-block-start: var(--space-section);
   inset-inline-start: var(--space-gutter);
   filter: blur(var(--decor-cloud-blur-b));
+}
+
+/* ---------- Shared case / subtle pieces ---------- */
+
+.card__media {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-color: var(--color-bg-tint-2);
+  border-radius: var(--card-media-radius);
+}
+
+.card__content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-stack-default);
+  min-width: 0;
+}
+
+/* Three type styles on case cards: (1) title/display (2) body (3) meta/chips/CTA */
+.card__meta {
+  font-family: var(--font-body);
+  font-size: var(--text-size-small);
+  font-weight: var(--font-weight-strong);
+  line-height: var(--line-height-body);
+  color: var(--color-text-accent);
+}
+
+.card__title--lg {
+  font-family: var(--font-display);
+  font-size: var(--text-size-h2);
+  font-weight: var(--font-weight-display);
+  letter-spacing: var(--letter-spacing-display);
+  line-height: var(--line-height-body);
+  color: var(--color-text-primary);
+}
+
+.card__role {
+  font-family: var(--font-body);
+  font-size: var(--text-size-body);
+  font-weight: var(--font-weight-body);
+  font-style: var(--font-style-emphasis);
+  line-height: var(--line-height-body);
+  color: var(--color-text-secondary);
+}
+
+.card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-inline-default);
+}
+
+.card__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-inline-default);
+  margin-block-start: auto;
+  padding-block-start: var(--space-stack-tight);
+}
+
+/* ---------- Variation A — featured horizontal (text left, media right) ---------- */
+
+.card.card--case-a {
+  display: grid;
+  grid-template-columns: var(--card-case-columns);
+  grid-template-areas: "content media";
+  align-items: stretch;
+  gap: var(--space-stack-loose);
+  padding-block: var(--space-stack-loose);
+  padding-inline: var(--space-stack-loose);
+}
+
+.card--case-a > .card__content {
+  grid-area: content;
+  min-width: 0;
+  gap: var(--space-stack-loose);
+  padding-block: var(--space-stack-default);
+  justify-content: center;
+}
+
+.card--case-a .card__title--lg {
+  max-width: var(--layout-reading-width);
+}
+
+.card--case-a .card__body {
+  font-size: var(--text-size-body-lg);
+  line-height: var(--line-height-body);
+  max-width: var(--layout-reading-width);
+}
+
+.card--case-a .card__tags {
+  gap: var(--space-stack-default);
+  padding-block-start: var(--space-stack-tight);
+}
+
+.card--case-a .card__actions {
+  padding-block-start: var(--space-stack-default);
+}
+
+.card--case-a > .card__media {
+  grid-area: media;
+  min-width: 0;
+  width: 100%;
+  aspect-ratio: var(--card-media-aspect-case);
+  align-self: stretch;
+}
+
+.card--case-a .device-mockup {
+  width: 100%;
+  height: 100%;
+  min-height: var(--space-step-120);
+}
+
+.card.card--subtle-a {
+  display: grid;
+  grid-template-columns: var(--card-subtle-columns);
+  grid-template-areas: "content media";
+  align-items: stretch;
+  gap: var(--space-stack-loose);
+  padding-block: var(--space-stack-loose);
+  padding-inline: var(--space-stack-loose);
+}
+
+.card--subtle-a > .card__content {
+  grid-area: content;
+  min-width: 0;
+  gap: var(--space-stack-default);
+  justify-content: center;
+}
+
+.card--subtle-a > .card__media {
+  grid-area: media;
+  min-width: 0;
+  width: 100%;
+  aspect-ratio: var(--card-media-aspect-subtle);
+}
+
+.card--subtle-a .card__title {
+  font-family: var(--font-display);
+  font-size: var(--text-size-h3);
+  font-weight: var(--font-weight-display);
+  line-height: var(--line-height-body);
+}
+
+/* ---------- Variation B — vertical flush media-top ---------- */
+
+.card--case-b {
+  padding: 0;
+  gap: 0;
+  overflow: hidden;
+}
+
+.card--case-b .card__media {
+  border-radius: 0;
+  aspect-ratio: var(--card-media-aspect-case);
+}
+
+.card--case-b .card__content {
+  padding-block: var(--card-padding-block);
+  padding-inline: var(--card-padding-inline);
+  gap: var(--space-stack-default);
 }

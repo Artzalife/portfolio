@@ -127,6 +127,18 @@
     var(--sky-300)
   );
   --card-edge-width: 1.5px;
+  --card-media-radius: var(--radius-image);
+  --card-media-inset: var(--space-m);
+  --mockup-bezel-bg: var(--blue-800);
+  --mockup-screen-bg: linear-gradient(
+    160deg,
+    var(--sky-100) 0%,
+    var(--lavender-100) 45%,
+    var(--blue-100) 100%
+  );
+  --mockup-screen-accent: var(--blue-200);
+  --mockup-stand-bg: var(--blue-700);
+  --mockup-radius: var(--radius-12);
 
   /* ======================= COMPONENT: button ======================= */
   --button-radius: var(--radius-control);

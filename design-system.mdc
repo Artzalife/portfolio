@@ -90,8 +90,8 @@ Naming pattern: `--{category}-{role}-{variant}-{state}`
 4. Nav
 5. Tag / chip
 6. Divider (rule + decorative shape)
-7. Card: case study thumbnail
-8. Card: speaking / writing row
+7. Card: case study thumbnail — A (horizontal text left / media right), B (vertical flush media-top)
+8. Card: subtle thumbnail (article / speaking) — A subtle (horizontal, paired with case A)
 9. Case study header: title, role, timeline, company, type
 10. Quote: subtle and loud
 11. Callout: subtle and loud

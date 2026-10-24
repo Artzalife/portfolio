@@ -1,0 +1,81 @@
+/* ==========================================================================
+   DEVICE MOCKUP — simple monitor placeholder (never a logo)
+   ========================================================================== */
+
+.device-mockup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-stack-tight);
+  width: 100%;
+  height: 100%;
+  padding: var(--space-stack-loose);
+  box-sizing: border-box;
+}
+
+.device-mockup__bezel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 100%;
+  flex: 1 1 auto;
+  min-height: 0;
+  padding: var(--space-stack-tight);
+  background-color: var(--mockup-bezel-bg);
+  border-radius: var(--mockup-radius);
+  box-shadow: var(--shadow-control);
+}
+
+.device-mockup__screen {
+  width: 100%;
+  height: 100%;
+  border-radius: var(--mockup-radius);
+  background: var(--mockup-screen-bg);
+  border-width: var(--border-width-default);
+  border-style: solid;
+  border-color: var(--mockup-screen-accent);
+  position: relative;
+  overflow: hidden;
+}
+
+.device-mockup__screen::after {
+  content: "";
+  position: absolute;
+  inset-block-start: var(--space-stack-default);
+  inset-inline-start: var(--space-stack-default);
+  inset-inline-end: var(--space-stack-default);
+  height: var(--space-stack-tight);
+  border-radius: var(--radius-scale-pill);
+  background-color: var(--mockup-screen-accent);
+}
+
+.device-mockup__stand {
+  width: var(--space-step-48);
+  height: var(--space-stack-tight);
+  background-color: var(--mockup-stand-bg);
+  border-radius: var(--radius-scale-2);
+}
+
+.device-mockup__base {
+  width: var(--space-step-80);
+  height: var(--space-stack-tight);
+  background-color: var(--mockup-stand-bg);
+  border-radius: var(--radius-scale-pill);
+}
+
+/* Compact mockup for subtle cards */
+.device-mockup--compact {
+  padding: var(--space-stack-default);
+  gap: var(--space-stack-tight);
+}
+
+.device-mockup--compact .device-mockup__bezel {
+  padding: var(--space-step-4);
+}
+
+.device-mockup--compact .device-mockup__stand,
+.device-mockup--compact .device-mockup__base {
+  display: none;
+}
