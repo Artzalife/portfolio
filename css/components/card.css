@@ -214,11 +214,6 @@
 
 .card--subtle-a .card__media {
   aspect-ratio: var(--card-media-aspect-subtle);
-  order: 1;
-}
-
-.card--subtle-a .card__content {
-  order: 0;
 }
 
 .card--subtle-a .card__title {

@@ -50,9 +50,9 @@
   /* ---------- Card media layout (theme-invariant) ---------- */
   --card-media-aspect-case: 4 / 3;
   --card-media-aspect-subtle: 16 / 9;
-  /* Case A: content | media (text left, mockup right) */
+  /* Case A / subtle A: content | media (text left, mockup right) */
   --card-case-columns: minmax(0, 1.15fr) minmax(0, 1fr);
-  --card-subtle-columns: minmax(0, 0.42fr) minmax(0, 1fr);
+  --card-subtle-columns: minmax(0, 1fr) minmax(0, 0.42fr);
 
   /* ---------- Layout ---------- */
   --layout-max-width: var(--size-container-default);
