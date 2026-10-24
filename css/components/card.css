@@ -186,7 +186,7 @@
 }
 
 .card--case-a .card__tags {
-  gap: var(--space-stack-default);
+  gap: var(--space-2xs);
   padding-block-start: var(--space-step-4);
 }
 
