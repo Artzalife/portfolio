@@ -172,7 +172,7 @@
 .card--case-a > .card__content {
   grid-area: content;
   min-width: 0;
-  gap: var(--space-stack-loose);
+  gap: var(--space-stack-default);
   padding-block: var(--space-stack-default);
   justify-content: center;
 }
@@ -189,11 +189,11 @@
 
 .card--case-a .card__tags {
   gap: var(--space-stack-default);
-  padding-block-start: var(--space-stack-tight);
+  padding-block-start: var(--space-step-4);
 }
 
 .card--case-a .card__actions {
-  padding-block-start: var(--space-stack-default);
+  padding-block-start: var(--space-stack-tight);
 }
 
 .card--case-a > .card__media {
