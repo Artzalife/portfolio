@@ -243,66 +243,19 @@
 
 /* ---------- Variation B — vertical flush media-top ---------- */
 
-.card--case-b,
-.card--subtle-b {
+.card--case-b {
   padding: 0;
   gap: 0;
   overflow: hidden;
 }
 
-.card--case-b .card__media,
-.card--subtle-b .card__media {
+.card--case-b .card__media {
   border-radius: 0;
   aspect-ratio: var(--card-media-aspect-case);
 }
 
-.card--subtle-b .card__media {
-  aspect-ratio: var(--card-media-aspect-subtle);
-}
-
-.card--case-b .card__content,
-.card--subtle-b .card__content {
+.card--case-b .card__content {
   padding-block: var(--card-padding-block);
   padding-inline: var(--card-padding-inline);
   gap: var(--space-stack-default);
-}
-
-.card--subtle-b .card__content {
-  padding-block: var(--space-stack-loose);
-  gap: var(--space-stack-tight);
-}
-
-/* ---------- Variation C — vertical inset media ---------- */
-
-.card--case-c {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-stack-loose);
-}
-
-.card--case-c .card__media {
-  aspect-ratio: var(--card-media-aspect-case);
-}
-
-.card--subtle-c {
-  display: grid;
-  grid-template-columns: var(--card-subtle-columns);
-  align-items: stretch;
-  gap: var(--space-stack-default);
-  padding: 0;
-  overflow: hidden;
-}
-
-.card--subtle-c .card__media {
-  border-radius: 0;
-  aspect-ratio: auto;
-  min-height: 100%;
-  align-self: stretch;
-}
-
-.card--subtle-c .card__content {
-  padding-block: var(--space-stack-loose);
-  padding-inline: var(--card-padding-inline);
-  gap: var(--space-stack-tight);
-  justify-content: center;
 }
