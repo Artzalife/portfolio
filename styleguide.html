@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Styleguide — Alissa</title>
+    <title>Classy — Alissa</title>
     <script>
       (function () {
         var theme = "classy";
@@ -31,6 +31,8 @@
     <link rel="stylesheet" href="css/base.css" />
     <link rel="stylesheet" href="css/components/button.css" />
     <link rel="stylesheet" href="css/components/card.css" />
+    <link rel="stylesheet" href="css/components/tag.css" />
+    <link rel="stylesheet" href="css/components/divider.css" />
     <link rel="stylesheet" href="css/components/theme-switcher.css" />
   </head>
   <body>
@@ -41,11 +43,21 @@
         <header class="sg-header">
           <div class="sg-header__intro">
             <p class="eyebrow">Design system</p>
-            <h1 class="text-h1">Styleguide</h1>
+            <h1 class="text-h1">
+              <span class="sg-only-classy">Classy</span>
+              <span class="sg-only-playful">Playful</span>
+            </h1>
             <p class="text-body-lg text-secondary">
-              Playful type: Nunito Black for display &amp; H2; Instrument Sans
-              for H1/body; Space Grotesk eyebrow. Classy stays Playfair +
-              Jakarta.
+              <span class="sg-only-classy"
+                >Editorial tokens: Playfair + Plus Jakarta, hairline rules, yellow
+                highlighter. Browse type, spacing, color, radius, shadows, and
+                components.</span
+              >
+              <span class="sg-only-playful"
+                >Cloud tokens: Nunito + Instrument Sans, glass cards, soft
+                surfaces. Browse type, spacing, color, radius, shadows, and
+                components.</span
+              >
             </p>
           </div>
 
@@ -84,42 +96,48 @@
             <div class="sg-stack">
               <div class="sg-specimen">
                 <p class="sg-specimen__label">
-                  display · Classy: Playfair Bold · Playful: Nunito Black
+                  <span class="sg-only-classy">display · Playfair Bold</span>
+                  <span class="sg-only-playful">display · Nunito Black</span>
                 </p>
                 <p class="text-display">Product design, thoughtfully made.</p>
               </div>
 
               <div class="sg-specimen">
                 <p class="sg-specimen__label">
-                  h1 · Classy: Plus Jakarta Sans · Playful: Instrument Sans
+                  <span class="sg-only-classy">h1 · Plus Jakarta Sans</span>
+                  <span class="sg-only-playful">h1 · Instrument Sans</span>
                 </p>
                 <h1 class="text-h1">Case studies &amp; selected work</h1>
               </div>
 
               <div class="sg-specimen">
                 <p class="sg-specimen__label">
-                  h2 · Classy: Playfair Bold · Playful: Nunito Black
+                  <span class="sg-only-classy">h2 · Playfair Bold</span>
+                  <span class="sg-only-playful">h2 · Nunito Black</span>
                 </p>
                 <h2 class="text-h2">Brief, palette, and process</h2>
               </div>
 
               <div class="sg-specimen">
                 <p class="sg-specimen__label">
-                  h3 · Classy: Plus Jakarta Sans · Playful: Instrument Sans
+                  <span class="sg-only-classy">h3 · Plus Jakarta Sans</span>
+                  <span class="sg-only-playful">h3 · Instrument Sans</span>
                 </p>
                 <h3 class="text-h3">Research notes from the field</h3>
               </div>
 
               <div class="sg-specimen">
                 <p class="sg-specimen__label">
-                  eyebrow · Classy: Plus Jakarta · Playful: Space Grotesk
+                  <span class="sg-only-classy">eyebrow · Plus Jakarta Sans</span>
+                  <span class="sg-only-playful">eyebrow · Space Grotesk</span>
                 </p>
                 <p class="eyebrow">Brief &amp; palette</p>
               </div>
 
               <div class="sg-specimen">
                 <p class="sg-specimen__label">
-                  body-lg · Classy: Plus Jakarta · Playful: Instrument Sans
+                  <span class="sg-only-classy">body-lg · Plus Jakarta Sans</span>
+                  <span class="sg-only-playful">body-lg · Instrument Sans</span>
                 </p>
                 <p class="text-body-lg">
                   Larger supporting copy for intros and lead paragraphs that need
@@ -129,11 +147,12 @@
 
               <div class="sg-specimen">
                 <p class="sg-specimen__label">
-                  body · Classy: Plus Jakarta · Playful: Instrument Sans
+                  <span class="sg-only-classy">body · Plus Jakarta Sans</span>
+                  <span class="sg-only-playful">body · Instrument Sans</span>
                 </p>
                 <p class="text-body">
                   Body text for reading. Keep lines comfortable and contrast
-                  WCAG-friendly across both themes.
+                  WCAG-friendly.
                 </p>
               </div>
 
@@ -145,7 +164,10 @@
               </div>
 
               <div class="sg-specimen">
-                <p class="sg-specimen__label">emphasis · .emphasis</p>
+                <p class="sg-specimen__label">
+                  <span class="sg-only-classy">emphasis · italic teal accent</span>
+                  <span class="sg-only-playful">emphasis · pink accent</span>
+                </p>
                 <p class="text-body">
                   Design systems people will
                   <em class="emphasis">actually use.</em>
@@ -153,12 +175,261 @@
               </div>
 
               <div class="sg-specimen">
-                <p class="sg-specimen__label">highlight · .highlight</p>
+                <p class="sg-specimen__label">
+                  <span class="sg-only-classy">highlight · yellow marker swipe</span>
+                  <span class="sg-only-playful">highlight · lavender wash</span>
+                </p>
                 <p class="text-body-lg">
                   Mark the phrase that matters with a
                   <span class="highlight">highlighter swipe</span>
                   behind the words.
                 </p>
+              </div>
+            </div>
+          </section>
+
+          <section class="sg-section" aria-labelledby="spacing-heading">
+            <div class="sg-section__title">
+              <h2 id="spacing-heading" class="text-h2">Spacing</h2>
+            </div>
+
+            <div class="sg-stack">
+              <div class="sg-specimen">
+                <p class="sg-specimen__label">
+                  8pt grid · --space-3xs…4xl · --space-step-4…120
+                </p>
+                <div class="sg-swatch-row">
+                  <div class="sg-space sg-space--4">
+                    <span class="sg-space__box" aria-hidden="true"></span>
+                    <span class="sg-space__value">4</span>
+                  </div>
+                  <div class="sg-space sg-space--8">
+                    <span class="sg-space__box" aria-hidden="true"></span>
+                    <span class="sg-space__value">8</span>
+                  </div>
+                  <div class="sg-space sg-space--12">
+                    <span class="sg-space__box" aria-hidden="true"></span>
+                    <span class="sg-space__value">12</span>
+                  </div>
+                  <div class="sg-space sg-space--16">
+                    <span class="sg-space__box" aria-hidden="true"></span>
+                    <span class="sg-space__value">16</span>
+                  </div>
+                  <div class="sg-space sg-space--24">
+                    <span class="sg-space__box" aria-hidden="true"></span>
+                    <span class="sg-space__value">24</span>
+                  </div>
+                  <div class="sg-space sg-space--32">
+                    <span class="sg-space__box" aria-hidden="true"></span>
+                    <span class="sg-space__value">32</span>
+                  </div>
+                  <div class="sg-space sg-space--48">
+                    <span class="sg-space__box" aria-hidden="true"></span>
+                    <span class="sg-space__value">48</span>
+                  </div>
+                  <div class="sg-space sg-space--64">
+                    <span class="sg-space__box" aria-hidden="true"></span>
+                    <span class="sg-space__value">64</span>
+                  </div>
+                  <div class="sg-space sg-space--80">
+                    <span class="sg-space__box" aria-hidden="true"></span>
+                    <span class="sg-space__value">80</span>
+                  </div>
+                  <div class="sg-space sg-space--120">
+                    <span class="sg-space__box" aria-hidden="true"></span>
+                    <span class="sg-space__value">120</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="sg-specimen">
+                <p class="sg-specimen__label">
+                  roles · stack-tight 8 · stack-default 16 · stack-loose 32 ·
+                  gutter 24 · section 120
+                </p>
+                <p class="text-small">
+                  Prefer semantic roles in UI
+                  (<code>--space-stack-*</code>, <code>--space-gutter</code>,
+                  <code>--space-section</code>); use
+                  <code>--space-step-*</code> when you need an exact grid step.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <section class="sg-section" aria-labelledby="color-heading">
+            <div class="sg-section__title">
+              <h2 id="color-heading" class="text-h2">Color</h2>
+            </div>
+
+            <div class="sg-stack">
+              <div class="sg-specimen">
+                <p class="sg-specimen__label">
+                  <span class="sg-only-classy"
+                    >semantic roles · editorial black, teal, yellow</span
+                  >
+                  <span class="sg-only-playful"
+                    >semantic roles · sky, navy, pink</span
+                  >
+                </p>
+                <div class="sg-swatch-row">
+                  <div class="sg-color sg-color--page">
+                    <span class="sg-color__chip" aria-hidden="true"></span>
+                    <span class="sg-space__value">bg-page</span>
+                  </div>
+                  <div class="sg-color sg-color--surface">
+                    <span class="sg-color__chip" aria-hidden="true"></span>
+                    <span class="sg-space__value">surface</span>
+                  </div>
+                  <div class="sg-color sg-color--tint-1">
+                    <span class="sg-color__chip" aria-hidden="true"></span>
+                    <span class="sg-space__value">tint-1</span>
+                  </div>
+                  <div class="sg-color sg-color--tint-2">
+                    <span class="sg-color__chip" aria-hidden="true"></span>
+                    <span class="sg-space__value">tint-2</span>
+                  </div>
+                  <div class="sg-color sg-color--inverse">
+                    <span class="sg-color__chip" aria-hidden="true"></span>
+                    <span class="sg-space__value">inverse</span>
+                  </div>
+                  <div class="sg-color sg-color--text">
+                    <span class="sg-color__chip" aria-hidden="true"></span>
+                    <span class="sg-space__value">text</span>
+                  </div>
+                  <div class="sg-color sg-color--accent">
+                    <span class="sg-color__chip" aria-hidden="true"></span>
+                    <span class="sg-space__value">accent</span>
+                  </div>
+                  <div class="sg-color sg-color--highlight">
+                    <span class="sg-color__chip" aria-hidden="true"></span>
+                    <span class="sg-space__value">highlight</span>
+                  </div>
+                  <div class="sg-color sg-color--border">
+                    <span class="sg-color__chip" aria-hidden="true"></span>
+                    <span class="sg-space__value">border</span>
+                  </div>
+                  <div class="sg-color sg-color--action">
+                    <span class="sg-color__chip" aria-hidden="true"></span>
+                    <span class="sg-space__value">action</span>
+                  </div>
+                  <div class="sg-color sg-color--focus">
+                    <span class="sg-color__chip" aria-hidden="true"></span>
+                    <span class="sg-space__value">focus</span>
+                  </div>
+                </div>
+              </div>
+              <p class="text-small">
+                Primitive ramps (neutral, teal, pink, blue, sky, lavender, mint,
+                peach) live in <code>css/tokens/primitives.css</code> and feed
+                these roles.
+              </p>
+            </div>
+          </section>
+
+          <section class="sg-section" aria-labelledby="radius-heading">
+            <div class="sg-section__title">
+              <h2 id="radius-heading" class="text-h2">Radius</h2>
+            </div>
+
+            <div class="sg-specimen">
+              <p class="sg-specimen__label">
+                scale · 0 · 2 · 6 · 12 · 20 · 28 · pill
+              </p>
+              <div class="sg-swatch-row sg-swatch-row--center">
+                <div class="sg-radius sg-radius--0">
+                  <span class="sg-radius__box" aria-hidden="true"></span>
+                  <span class="sg-space__value">0</span>
+                </div>
+                <div class="sg-radius sg-radius--2">
+                  <span class="sg-radius__box" aria-hidden="true"></span>
+                  <span class="sg-space__value">2</span>
+                </div>
+                <div class="sg-radius sg-radius--6">
+                  <span class="sg-radius__box" aria-hidden="true"></span>
+                  <span class="sg-space__value">6</span>
+                </div>
+                <div class="sg-radius sg-radius--12">
+                  <span class="sg-radius__box" aria-hidden="true"></span>
+                  <span class="sg-space__value">12</span>
+                </div>
+                <div class="sg-radius sg-radius--20">
+                  <span class="sg-radius__box" aria-hidden="true"></span>
+                  <span class="sg-space__value">20</span>
+                </div>
+                <div class="sg-radius sg-radius--28">
+                  <span class="sg-radius__box" aria-hidden="true"></span>
+                  <span class="sg-space__value">28</span>
+                </div>
+                <div class="sg-radius sg-radius--pill">
+                  <span class="sg-radius__box" aria-hidden="true"></span>
+                  <span class="sg-space__value">pill</span>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="sg-section" aria-labelledby="shadow-heading">
+            <div class="sg-section__title">
+              <h2 id="shadow-heading" class="text-h2">Shadows</h2>
+            </div>
+
+            <div class="sg-stack">
+              <div class="sg-specimen">
+                <p class="sg-specimen__label">
+                  <span class="sg-only-classy">shadows · none (editorial)</span>
+                  <span class="sg-only-playful"
+                    >shadows · soft card / navy offset control</span
+                  >
+                </p>
+                <div class="sg-swatch-row">
+                  <div class="sg-shadow sg-shadow--card">
+                    <div class="sg-shadow__box" aria-hidden="true"></div>
+                    <span class="sg-space__value">--shadow-card</span>
+                  </div>
+                  <div class="sg-shadow sg-shadow--card-hover">
+                    <div class="sg-shadow__box" aria-hidden="true"></div>
+                    <span class="sg-space__value">--shadow-card-hover</span>
+                  </div>
+                  <div class="sg-shadow sg-shadow--control">
+                    <div class="sg-shadow__box" aria-hidden="true"></div>
+                    <span class="sg-space__value">--shadow-control</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="sg-specimen">
+                <p class="sg-specimen__label">focus ring · --color-focus-ring</p>
+                <div class="sg-focus-demo">Focus ring</div>
+              </div>
+            </div>
+          </section>
+
+          <section class="sg-section" aria-labelledby="divider-heading">
+            <div class="sg-section__title">
+              <h2 id="divider-heading" class="text-h2">Divider</h2>
+            </div>
+
+            <div class="sg-specimen">
+              <p class="sg-specimen__label">
+                <span class="sg-only-classy">.divider · solid hairline</span>
+                <span class="sg-only-playful">.divider · dotted</span>
+              </p>
+              <hr class="divider" />
+            </div>
+          </section>
+
+          <section class="sg-section" aria-labelledby="tag-heading">
+            <div class="sg-section__title">
+              <h2 id="tag-heading" class="text-h2">Tags</h2>
+            </div>
+
+            <div class="sg-specimen">
+              <p class="sg-specimen__label">.tag · --tag-bg / --tag-border</p>
+              <div class="sg-row">
+                <span class="tag">Product design</span>
+                <span class="tag">Case study</span>
+                <span class="tag">Speaking</span>
               </div>
             </div>
           </section>
@@ -171,16 +442,29 @@
             <div class="sg-stack">
               <div class="sg-specimen">
                 <p class="sg-specimen__label">
-                  card · glass + iridescent edge in Playful; hairline rule in
-                  Classy
+                  <span class="sg-only-classy"
+                    >card · transparent + top hairline rule</span
+                  >
+                  <span class="sg-only-playful"
+                    >card · glass fill + iridescent edge</span
+                  >
                 </p>
                 <div class="sg-row">
                   <article class="card">
                     <p class="eyebrow">Case study</p>
-                    <h3 class="card__title">Soap-bubble surfaces</h3>
+                    <h3 class="card__title">
+                      <span class="sg-only-classy">Editorial columns</span>
+                      <span class="sg-only-playful">Soap-bubble surfaces</span>
+                    </h3>
                     <p class="card__body">
-                      Translucent fill, backdrop blur, and a quiet iridescent
-                      rim — premium air, not candy.
+                      <span class="sg-only-classy"
+                        >Same card DOM as Playful — boxes switch off into ruled
+                        columns.</span
+                      >
+                      <span class="sg-only-playful"
+                        >Translucent fill, backdrop blur, and a quiet iridescent
+                        rim — premium air, not candy.</span
+                      >
                     </p>
                   </article>
                   <article class="card card--alt">
