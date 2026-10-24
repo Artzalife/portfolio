@@ -116,16 +116,18 @@
   --letter-spacing-wide: 0.08em;
   --letter-spacing-wider: 0.14em;
 
-  /* ---------- Fluid space scale (Utopia-style) ---------- */
-  --space-3xs: clamp(0.25rem, 0.23rem + 0.11vw, 0.31rem);
-  --space-2xs: clamp(0.50rem, 0.48rem + 0.11vw, 0.56rem);
-  --space-xs:  clamp(0.75rem, 0.72rem + 0.17vw, 0.84rem);
-  --space-s:   clamp(1.00rem, 0.95rem + 0.23vw, 1.13rem);
-  --space-m:   clamp(1.50rem, 1.43rem + 0.34vw, 1.69rem);
-  --space-l:   clamp(2.00rem, 1.91rem + 0.45vw, 2.25rem);
-  --space-xl:  clamp(3.00rem, 2.86rem + 0.68vw, 3.38rem);
-  --space-2xl: clamp(4.00rem, 3.82rem + 0.91vw, 4.50rem);
-  --space-3xl: clamp(6.00rem, 5.73rem + 1.36vw, 6.75rem);
+  /* ---------- Space scale (8pt grid, fixed rem @ 16px root) ----------
+     4 · 8 · 12 · 16 · 24 · 32 · 48 · 64 · 80 · 120 */
+  --space-3xs: 0.25rem; /* 4 */
+  --space-2xs: 0.5rem;  /* 8 */
+  --space-xs:  0.75rem; /* 12 */
+  --space-s:   1rem;    /* 16 */
+  --space-m:   1.5rem;  /* 24 */
+  --space-l:   2rem;    /* 32 */
+  --space-xl:  3rem;    /* 48 */
+  --space-2xl: 4rem;    /* 64 */
+  --space-3xl: 5rem;    /* 80 */
+  --space-4xl: 7.5rem;  /* 120 */
 
   /* ---------- Radius ---------- */
   --radius-0: 0;
